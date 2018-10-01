@@ -1,0 +1,19 @@
+body{
+	font-family: 'Cutive Mono', monospace;
+	background-color: #41acf4;
+	color: #ffffff;
+}
+
+ul {
+    background-color: #ff6666; 
+}
+
+li {
+    display:inline-block;
+    padding: 14px 16px;
+}
+
+li:hover {
+    color: #ff3385;
+    background-color: #ffffff;
+}
