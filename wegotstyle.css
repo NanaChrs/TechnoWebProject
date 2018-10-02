@@ -17,3 +17,42 @@ li:hover {
     color: #ff3385;
     background-color: #ffffff;
 }
+
+.inscription{
+	display:flex;
+	justify-content: space-around;
+}
+
+.btn {
+	background-color:#ff6666;
+	margin: 10px;
+	color:#ffffff;
+	font-family:'Cutive Mono', monospace;
+	font-size:18px;
+	padding:16px 31px;
+	
+	
+}
+.btn:hover {
+	background-color:#ff3385;
+}
+
+input{
+	background-color:#ff6666;
+	width:inherit;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+label{
+	display:block;
+	font-size: 20px;
+	margin-bottom: 5px;
+	white-space: nowrap;
+
+}
+
+.col1{
+
+	width:30%;
+}
