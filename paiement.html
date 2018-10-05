@@ -9,8 +9,8 @@
      <!-- header -->
 	<center><ul>
 		<a href="connexion_inscription.html"><li>Connexion ou Inscription</li></a>
-		<li><a href=""></a>Shopping par Catégorie</li>
-		<li><a href=""></a>Panier<image scr="panierIcon.jpg"></li>
+		<li><a href="CategShop.html">Shopping par Catégorie</a></li>
+		<li><a href="panier.html">Panier</a><image scr="panierIcon.jpg"></li>
 	</ul></center>
 </head>
 <body>
@@ -19,20 +19,20 @@
 
 
 			<div class="col1">
-				<form action="traitement_co.php" method="post">
+				
 					<br><br>
 				<h1>Panier</h1>
 					<p>-...</br>-...</br>-...</p>				
 				<h1>Total Panier : ...€</h1>										
-				<a href="panier.htmp"><input type="submit" name="modifier" class="btn" value="Modifier"></a>		
-				</form>
+				<a href="panier.html"><input type="button" name="modifier" class="btn" value="Modifier"></a>		
+				
 			</div>
 
 
 			<div class="col2">
 				<br><br>
 				<h1> Paiement</h1>
-					<form action="traitement_ins.php" method="post">
+					<form action="traitement_pay.php" method="post">
 					<p>Indiquez les informations correspondant à votre carte</p>
 
 					<INPUT type="radio" name="choix1" value="1"> Visa
