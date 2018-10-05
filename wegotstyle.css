@@ -1,11 +1,34 @@
 body{
 	font-family: 'Cutive Mono', monospace;
-	background-color: #41acf4;
-	color: #ffffff;
+	background-color: #ffff;
+	color: #5900b3;
+	margin: 0px;
+	padding:0px;
+}
+
+h1{
+	position:all;
+	left:0;
+	right:0;
+    background-color: #ffff; 
+    color: #edafb8;
+}
+
+h2{
+	position:absolute;
+	margin: 0px;
+	padding: 0px;
+	background: #edafb8;
+	float: left;
 }
 
 ul {
-    background-color: #ff6666; 
+	position:absolute;
+	left:0;
+	right:0;
+    background-color: #aec5eb; 
+    margin: 0px;
+	padding:0px;
 }
 
 li {
@@ -14,8 +37,12 @@ li {
 }
 
 li:hover {
-    color: #ff3385;
-    background-color: #ffffff;
+    color: #f9dec9;
+    background-color: #edafb8;
+}
+
+img{
+	float: left;
 }
 
 .inscription{
@@ -23,10 +50,14 @@ li:hover {
 	justify-content: space-around;
 }
 
+.paiement{
+	display:flex;
+	justify-content: space-around;
+}
 .btn {
-	background-color:#ff6666;
+	background-color:#aec5eb;
 	margin: 10px;
-	color:#ffffff;
+	color:#5900b3;
 	font-family:'Cutive Mono', monospace;
 	font-size:18px;
 	padding:16px 31px;
@@ -34,11 +65,12 @@ li:hover {
 	
 }
 .btn:hover {
-	background-color:#ff3385;
+	background-color:#edafb8;
+	color: #f9dec9;
 }
 
 input{
-	background-color:#ff6666;
+	background-color:#aec5eb;
 	width:inherit;
 	margin-top: 0px;
 	margin-bottom: 10px;
