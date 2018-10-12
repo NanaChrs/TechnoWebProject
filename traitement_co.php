@@ -2,7 +2,7 @@
 		
 		//se connecter à la BDD
 		$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');
-		
+		include("header.php");
 
 		if (isset($_POST['connexion'])){
 			$donnees = $bdd->prepare('SELECT Nom, Prenom, Password FROM clients WHERE Mail=?');
@@ -12,7 +12,7 @@
 			while ($req = $donnees->fetch()){									
 				if($req['Password']!=$_POST['password']){
 
-					include("header.php");
+					
 					include ("connexion.php");
 					echo 'Mauvais mot de passe';
 					
@@ -26,7 +26,7 @@
 			}
 		}
 		else{	
-			include("header.php");
+			
 			include("connexion.php");
 			include("inscription.php");
 						

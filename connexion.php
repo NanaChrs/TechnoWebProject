@@ -10,6 +10,8 @@
     
 
 </head>
+
+<br/> <br/> <br/>
 <div class="col1">
 	<form action="traitement_co.php" method="post">
 	<h1> Avez-vous déjà un compte ?</h1>				
