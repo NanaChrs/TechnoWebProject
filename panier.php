@@ -20,19 +20,10 @@
 </head>
 <body>
 
-	<header>
-		<center>
-			<ul>
-				<a href="index.html"><li>Home</li></a>
-				<a href="connexion_inscription.html"><li>Connexion ou Inscription</li></a>
-				<a href="CategShop.html"><li>Shopping par Catégorie</li></a>
-				<a href="panier.html"><li>Panier<img src="panierIcon.png" height=15px class="panier"></li></a>
-			</ul>
-		</center>
-	</header>
+	<?php include("header.php"); ?>
 
 
-		</br></br></br></br>
+		</br></br></br></br></br></br></br></br>
 		<div class="panier">
 			<table><center>
 				<thread bgcolor=#edafb8><tr bgcolor=#edafb8>
@@ -54,7 +45,7 @@
 				<td colspan="7"><center>Prix Total : <?php echo $Prixtoto; ?></center></td>
 			 	</tr></tbody>
 				<tfoot><tr bgcolor=#edafb8>
- 				<td colspan="7"><center><a href="paiement.html"><input name="valider" type="submit" id="valider" value="Valider" class="btn"/></a></center></td>
+ 				<td colspan="7"><center><a href="paiement.php"><input name="valider" type="submit" id="valider" value="Valider" class="btn"/></a></center></td>
 				</tr></tfoot>
 			</center></table>	
 		</div>
