@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 12 oct. 2018 à 11:45
+-- Généré le :  ven. 12 oct. 2018 à 18:46
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -79,14 +79,19 @@ CREATE TABLE IF NOT EXISTS `produit` (
   `Description` text NOT NULL,
   `IdType` int(11) NOT NULL,
   PRIMARY KEY (`IdProduit`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `produit`
 --
 
 INSERT INTO `produit` (`IdProduit`, `Nom`, `Prix`, `QteStock`, `Description`, `IdType`) VALUES
-(1, 'Chaton', 100, 5, 'Chaton tout doux qui aime les câlins', 1);
+(1, 'Chaton', 100, 5, 'Chaton tout doux qui aime les câlins', 1),
+(2, 'Chaton mignon', 2000, 12, 'Un chaton mignon cher', 1),
+(3, 'Chaton moins mignon', 1, 45632, 'des trucs', 1),
+(4, 'chien', 500, 100, 'chien', 2),
+(5, 'Chien blanc crême brûler', 100000, 1, 'un chien creme bruelr qui  le meme gouts', 2),
+(6, 'Cheval sans patte', 1, 123, '', 3);
 
 -- --------------------------------------------------------
 
@@ -99,14 +104,16 @@ CREATE TABLE IF NOT EXISTS `type` (
   `IdType` int(11) NOT NULL AUTO_INCREMENT,
   `Nom` varchar(255) NOT NULL,
   PRIMARY KEY (`IdType`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `type`
 --
 
 INSERT INTO `type` (`IdType`, `Nom`) VALUES
-(1, 'Chat');
+(1, 'Chat'),
+(2, 'Chien'),
+(3, 'Cheval');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
