@@ -54,6 +54,11 @@ nav {
 
 }
 
+.Corps {
+	display : flex;
+	flex-direction: row;
+}
+
 .Onglet {
 	display:flex;
 	background-color: brown;

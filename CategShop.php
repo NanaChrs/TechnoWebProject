@@ -40,33 +40,43 @@
     <nav>
         <div>
             <?php 
-            if(! isset($_GET['Nom'])){
+            
                 $categories = $bdd->query("select * from Type");
                 while ($categorie = $categories->fetch()){
                     echo('<div class = "Onglet" >');
+                    echo('<a href="CategShop.php?IdType=');
+                    echo($categorie['IdType']);
+                    echo('">');
                     echo($categorie['Nom']);
+                    echo('</a>');
                     $objets = $bdd -> prepare("select * from produit where IdType = ?");
                     $objets -> execute(array($categorie['IdType']));
-                    while($objet = $objets -> fetch()){
-                        echo('<div class = "Objet">');
-                        echo('<a href="CategShop.php?Nom=' . $objet['Nom'] . '&amp;IdProduit=' . $objet['IdProduit'] . '">');
-                        echo($objet['Nom']);
-                        echo('</a>');
-                        echo('</div>');
-                    }
                     echo('</div>');
                 }
-            }else{
-                echo('<h1>Votre commande de ' . $_GET['Nom'] . ' a bien été prise en compte</h1>');
-                echo('<a href = "CategShop.php"> Retour </a>');
-            }
+            
             ?>
+
+
+
+
         </div>
     </nav>
 
     <div class = "cadre">
-        
+        <?php
+            if(isset($_GET['IdType'])){
+                $objets = $bdd -> prepare("select * from produit where IdType = ?");
+                $objets -> execute(array($_GET['IdType']));
 
+                while($objet = $objets -> fetch()){
+                    echo('<div class = "Objet">');
+                    echo($objet['Nom']);
+                    echo('</a>');
+                    echo('</div>');
+                }
+            }
+            
+        ?>
 
     </div>
 
