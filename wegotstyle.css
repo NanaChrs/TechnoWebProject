@@ -39,6 +39,7 @@ li {
 li:hover {
     color: #f9dec9;
     background-color: #edafb8;
+    border-radius: 5px;
 }
 
 img{
