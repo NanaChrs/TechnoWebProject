@@ -54,6 +54,15 @@ nav {
 
 }
 
+div nav a {
+	text-decoration: none;
+	color : white;
+}
+
+div nav a:hover{
+	color : burlywood; 
+}
+
 .Corps {
 	display : flex;
 	flex-direction: row;
@@ -73,9 +82,9 @@ nav {
 	flex-wrap: wrap;
 }
 
-.Onglet:hover{
+/*.Onglet:hover{
 	height: auto;
-}
+}*/
 
 .Onglet div{
 	display: flex;
