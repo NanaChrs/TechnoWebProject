@@ -46,6 +46,10 @@ img{
 	float: left;
 }
 
+.panier{
+	float: right;
+}
+
 .inscription{
 	display:flex;
 	justify-content: space-around;
