@@ -1,4 +1,3 @@
-
 <?php 
     session_start();
     try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
@@ -23,9 +22,9 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <?php //include("header.php") ?>
+    <?php include("header.php") ?>
    
-    <header>
+   <!-- <header>
         <center>
             <ul>
                 <a href="index.php"><li>Home</li></a>
@@ -34,7 +33,7 @@
                 <a href="panier.php"><li>Panier<img src="panierIcon.png" height=15px class="panier"></li></a>
             </ul>
         </center>
-    </header>
+    </header> -->
 
 <div class="Corps">
 
