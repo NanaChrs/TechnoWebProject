@@ -37,7 +37,7 @@ div{
 	margin : 0px 0px 0px 0px;
 }
 
-.Cadre {
+nav {
 	align-items: center;
 	background-color: darkolivegreen ;
 	height: 100%;
@@ -54,24 +54,39 @@ div{
 
 }
 
-.Onglet{
+div nav a {
+	text-decoration: none;
+	color : white;
+}
+
+div nav a:hover{
+	color : burlywood; 
+}
+
+.Corps {
+	display : flex;
+	flex-direction: row;
+}
+
+.Onglet {
 	display:flex;
 	background-color: brown;
 	padding : 10px 70px;
 	list-style: none;
 	height: 40px;
 	width: auto;
+	max-width: 150px;
 	min-width: 6em;
 	overflow: hidden;
 	border-right : solid black 3px; 
 	flex-wrap: wrap;
 }
 
-.Onglet:hover{
+/*.Onglet:hover{
 	height: auto;
-}
+}*/
 
-.Onglet .Liste div{
+.Onglet div{
 	display: flex;
 	flex-direction: column;
 	list-style: none;

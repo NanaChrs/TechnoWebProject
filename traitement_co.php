@@ -11,10 +11,12 @@
 
 			while ($req = $donnees->fetch()){									
 				if($req['Password']!=$_POST['password']){
+
 					include("header.php");
 					include ("connexion.php");
 					echo 'Mauvais mot de passe';
 					
+
 
 				}
 				else {
