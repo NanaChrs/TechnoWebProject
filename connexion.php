@@ -18,5 +18,6 @@
 	
 	<center>
 	<input type="submit" name="connexion" class="btn" value="Se connecter"></center>
+
+	</form>
 </div>
-</form>
