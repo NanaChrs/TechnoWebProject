@@ -16,7 +16,7 @@
 			<ul>
 				<a href="index.html"><li>Home</li></a>
 				<a href="connexion_inscription.html"><li>Connexion ou Inscription</li></a>
-				<a href="CategShop.html"><li>Shopping par Catégorie</li></a>
+				<a href="CategShop.php"><li>Shopping par Catégorie</li></a>
 				<a href="panier.html"><li>Panier<img src="panierIcon.png" height=15px class="panier"></li></a>
 			</ul>
 			<br /><br /><br /><h1>Bienvenue à Félindus!</h1>
