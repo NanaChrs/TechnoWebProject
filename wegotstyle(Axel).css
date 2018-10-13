@@ -1,6 +1,6 @@
 body{
 	font-family: 'Cutive Mono', monospace;
-	background-color: #41acf4;
+	background-color: #ffff;
 	color: #ffffff;
 	display : flex;
 	flex-direction : column;
@@ -13,7 +13,7 @@ header {
 	display:flex;
 	justify-content: center;
 	width: 100%;
-	background-color: #ff6666; 
+	background-color: #edafb8; 
 }
 
 header li {
@@ -22,8 +22,8 @@ header li {
 }
 
 header li:hover {
-    color: #ff3385;
-	background-color: lightsalmon;
+    color: #edafb8;
+	background-color: #edafb8;
 	border-radius: 5px;
 }
 
@@ -39,7 +39,7 @@ div{
 
 nav {
 	align-items: center;
-	background-color: darkolivegreen ;
+	background-color:  #edafb8;
 	height: 100%;
 	min-height: 100%;
 }
@@ -56,22 +56,23 @@ nav {
 
 div nav a {
 	text-decoration: none;
-	color : white;
+	color : #ffffff;
 }
 
 div nav a:hover{
-	color : burlywood; 
+	color : #ffffff; 
 }
 
 
 .Corps {
 	display : flex;
 	flex-direction: row;
+
 }
 
 .Onglet {
 	display:flex;
-	background-color: brown;
+	background-color: #edafb8;
 	padding : 10px 70px;
 	list-style: none;
 	height: 40px;
@@ -79,8 +80,9 @@ div nav a:hover{
 	max-width: 150px;
 	min-width: 6em;
 	overflow: hidden;
-	border-right : solid black 3px; 
+	border-right : solid white 3px; 
 	flex-wrap: wrap;
+
 }
 
 /*.Onglet:hover{
@@ -100,7 +102,7 @@ div nav a:hover{
 
 
 .Objet {
-	background-color: gray;
+	background-color: #e9afa3;
 	background-size: 100%;
 	padding-top : 0px;
 	padding-bottom: 0px;
@@ -116,7 +118,7 @@ div nav a:hover{
 }
 
 .btn {
-	background-color:#ff6666;
+	background-color:#edafb8;
 	margin: 10px;
 	color:#ffffff;
 	font-family:'Cutive Mono', monospace;
@@ -125,11 +127,11 @@ div nav a:hover{
 }
 
 .btn:hover {
-	background-color:#ff3385;
+	background-color:#edafb8;
 }
 
 input{
-	background-color:#ff6666;
+	background-color:#edafb8;
 	width:inherit;
 	margin-top: 0px;
 	margin-bottom: 10px;
@@ -143,10 +145,7 @@ label{
 
 }
 
-.col1{
 
-	width:30%;
-}
 
 
 
