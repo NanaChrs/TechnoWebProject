@@ -2,33 +2,33 @@ body{
 	font-family: 'Cutive Mono', monospace;
 	background-color: #ffff;
 	color: #5900b3;
-	margin: 0px;
+	margin:0px;
 	padding:0px;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 }
 
 h1{
-	position:all;
 	left:0;
 	right:0; 
     color: #aec5eb;
 }
 
 h2{
-	position:absolute;
 	margin: 0px;
 	padding: 0px;
 	background: #aec5eb;
 	float: left;
 }
 
-ul {
-	position:absolute;
+
+header {
+	display:flex;
+	justify-content: space-around;
 	left:0;
 	right:0;
     background-color: #edafb8; 
-    margin: 0px;
 	padding:0px;
 }
 
@@ -46,21 +46,9 @@ img{
 	float: left;
 }
 
-.panier{
-	float: right;
-}
 
-.inscription{
-	display:flex;
-	justify-content: space-around;
-}
-
-.paiement{
-	display:flex;
-	justify-content: space-around;
-}
 .btn {
-	background-color:#e9afa3;
+	background-color:#ffffff;
 	margin: 10px;
 	color:#5900b3;
 	font-family:'Cutive Mono', monospace;
@@ -74,7 +62,7 @@ img{
 	color: #e9afa3;
 }
 
-input{
+header input{
 	background-color:#edafb8;
 	width:inherit;
 	margin-top: 0px;
@@ -90,8 +78,18 @@ label{
 }
 
 .col1{
+	width:40%;
+	align-items: center;
+	display:flex;
+	flex-direction: column;
+}
 
-	width:30%;
+.col2{
+	width:60%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	
 }
 
 table{
@@ -109,4 +107,10 @@ td , th{
 	border-radius:50%;
 	border:none;
 	color:#000;
+}
+
+.container{
+	display: flex;
+	justify-content: space-between;
+
 }

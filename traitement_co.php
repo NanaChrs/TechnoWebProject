@@ -3,7 +3,7 @@
 		//se connecter à la BDD
 		$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');
 		include("header.php");
-		echo '<body>';
+		echo '<div class="container">';
 		if (isset($_POST['connexion'])){
 			$donnees = $bdd->prepare('SELECT Nom, Prenom, Password FROM clients WHERE Mail=?');
 
@@ -31,5 +31,5 @@
 			include("inscription.php");
 						
 		}
-		echo '</body>';
+		echo '</div>';
 	?>
