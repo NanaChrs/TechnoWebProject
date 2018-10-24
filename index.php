@@ -8,6 +8,29 @@
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
 //TODO get page parameter ($_GET['page'] or $_POST['page']) and assign it into $page variable
+	$page="index";
+	try {
+		$page=$_GET['page'];
+	}
+	catch(Exception $e){
+		console.log($e);
+	}
+	
+	if ($page=="categorie"){
+		include ("CategShop.php");
+	}
+
+	if ($page=="connexion"){
+		echo "<div id='container'>";
+		include("connexion.php");
+		include("inscription.php");
+		echo "</div>";
+	}
+	if ($page=="panier"){
+		include("panier.php");
+	}
+
+
 
 //if 'action/'.$page'.php' exists then include it (use file_exists($filename) function)
 
