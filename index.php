@@ -31,7 +31,11 @@
 
 
 //if 'action/'.$page'.php' exists then include it (use file_exists($filename) function)
-
+/*	if(file_exists('action/'.$page'.php')){
+		include('action/'.$page'.php');
+	}else
+		echo "nope, not found"
+*/
 
 //create one php file for each action to manage on the website
 
@@ -39,6 +43,7 @@
 //             input params (included in $_GET or $_POST)
 //             $database variable (initialized in $database.php) 
 // to insert or update data into database
+
 // TODO insert the start html envelope (<html><head>....</head><body>
 	echo "<html><head> </head><body>";
 // TODO using $page decide to include header.php
@@ -47,7 +52,12 @@
 
 //TODO if 'view/'.$page'.php' exists then include it (use file_exists($filename) function)
 //           else include 'view/main.php' (it has to exist)
-
+/*	if(file_exists('view/'.$page'.php')){
+		include('view/'.$page'.php');
+	}else{
+	 include('view/main.php');
+	}
+*/
 
 //create one php file for each view to manage on the website (don't forget to create on main.php view)
 
