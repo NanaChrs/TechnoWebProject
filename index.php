@@ -1,5 +1,3 @@
-
-
 <?php
 	session_start();
 	include("doctype.php");
@@ -42,10 +40,11 @@
 //             $database variable (initialized in $database.php) 
 // to insert or update data into database
 // TODO insert the start html envelope (<html><head>....</head><body>
-
+	echo "<html><head> </head><body>";
 // TODO using $page decide to include header.php
 
 //TODO add header display
+
 //TODO if 'view/'.$page'.php' exists then include it (use file_exists($filename) function)
 //           else include 'view/main.php' (it has to exist)
 
@@ -59,9 +58,5 @@
 
 // add view display possibly using data from database
 // TODO insert the end html envelope (</body></html>)
-
+	echo "</body></html>";
 ?>
-	
-
-</body>
-</html>
