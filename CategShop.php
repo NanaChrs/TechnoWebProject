@@ -1,15 +1,4 @@
-<?php 
-    /*session_start();
-    try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
-    catch (Exception $e){die('Erreur : ' . $e->getMessage());}*/
 
-
-
-
-
-
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +8,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="wegotstyle(Axel).css"/>
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <link rel="shortcut icon" href="panierIcon.png"/>
-    <script src="main.js"></script>
 </head>
 <body>
     <!--<?php include("header.php") ?>-->
@@ -44,7 +32,7 @@
                 $categories = $bdd->query("select * from Type");
                 while ($categorie = $categories->fetch()){
                     echo('<div class = "Onglet" >');
-                    echo('<a href="CategShop.php?IdType=');
+                    echo('<a href="index.php?page=categorie&IdType=');
                     echo($categorie['IdType']);
                     echo('">');
                     echo($categorie['Nom']);
@@ -70,8 +58,25 @@
 
                 while($objet = $objets -> fetch()){
                     echo('<div class = "Objet">');
+                    echo($objet['QteStock']);
+                    echo('      ');
                     echo($objet['Nom']);
-                    echo('</a>');
+                    echo('  ');echo($objet['Prix']);echo('€');
+                    echo('<form form="post">');
+                    echo('<input name="Id" value="'. $objet['IdProduit'] .'"hidden>');
+                    echo('<input name="Nom" value="'. $objet['Nom'] .'"hidden>');
+                    echo('<input name="Prix" value="'. $objet['Prix'] .'"hidden>');
+                    echo('<select multiple name="Quantite">');
+                        for($i=0;$i<=$objet['QteStock'];$i++)
+                        {
+                            echo('"<option value='.$i.'>'.$i);
+                            echo('');
+                            echo('</option>');
+                        }
+                        echo "</select>";
+
+                        echo('<input type="submit" name="page" value="panier">');
+                    echo("</form>");
                     echo('</div>');
                 }
             }

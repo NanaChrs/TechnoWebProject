@@ -2,34 +2,44 @@
 	session_start();
 	include("doctype.php");
 	include("header.php");
-	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
+	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', 'root');}
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
-//TODO get page parameter ($_GET['page'] or $_POST['page']) and assign it into $page variable
-	$page="index";
-	try {
-		$page=$_GET['page'];
+function getParam($key){
+	if (isset($_GET[$key])){
+		return $_GET[$key];
 	}
-	catch(Exception $e){
-		console.log($e);
+	else if (isset($_POST[$key])){
+		return $_POST[$key];
 	}
-	
-	if ($page=="categorie"){
-		include ("CategShop.php");
-	}
+	else return "";
+}
 
-	if ($page=="connexion"){
-		echo "<div id='container'>";
-		include("connexion.php");
-		include("inscription.php");
-		echo "</div>";
-	}
-	if ($page=="panier"){
-		include("panier.php");
-	}
-	if ($page=="merci"){
-		include("merci.php");
-	}
+include("sqlfunctions.php");
+
+//TODO get page parameter ($_GET['page'] or $_POST['page']) and assign it into $page variable
+		$page=getParam("page");
+		if ($page=="categorie"){
+			include ("CategShop.php");
+		}
+
+		if ($page=="connexion"){
+			echo "<div class='container'>";
+			include("traitement_co.php");
+			echo "</div>";
+		}
+		if ($page=="panier"){
+			include("panier.php");
+		}
+		if ($page=="Valider"){
+			include("search.php");
+		}
+		if ($page=="paiement"){
+			include("paiement.php");
+		}
+    if ($page=="merci"){
+		  include("merci.php");
+	  }
 
 
 

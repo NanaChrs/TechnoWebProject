@@ -9,6 +9,16 @@ body{
 	margin : 0px;
 }
 
+.cadre .Objet select{
+	max-height: 1.5em;
+	overflow : hidden;
+	overflow-y: scroll;
+}
+
+.cadre .Objet select:hover{
+	max-height: 5em;
+}
+
 header {
 	display:flex;
 	justify-content: center;
