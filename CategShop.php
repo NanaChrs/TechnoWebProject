@@ -19,7 +19,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="wegotstyle(Axel).css"/>
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <link rel="shortcut icon" href="panierIcon.png"/>
-    <script src="main.js"></script>
 </head>
 <body>
     <!--<?php include("header.php") ?>-->

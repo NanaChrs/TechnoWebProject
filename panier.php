@@ -20,8 +20,6 @@
 </head>
 <body>
 
-	<?php include("header.php"); ?>
-
 
 		</br></br></br></br></br></br></br></br>
 		<div class="panier">
