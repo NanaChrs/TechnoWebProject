@@ -6,26 +6,27 @@
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
 //TODO get page parameter ($_GET['page'] or $_POST['page']) and assign it into $page variable
-	$page="index";
-	try {
+	if (isset($_GET['page'])){
 		$page=$_GET['page'];
-	}
-	catch(Exception $e){
-		console.log($e);
-	}
-	
-	if ($page=="categorie"){
-		include ("CategShop.php");
-	}
+		if ($page=="categorie"){
+			include ("CategShop.php");
+		}
 
-	if ($page=="connexion"){
-		echo "<div id='container'>";
-		include("connexion.php");
-		include("inscription.php");
-		echo "</div>";
+		if ($page=="connexion"){
+			echo "<div id='container'>";
+			include("connexion.php");
+			include("inscription.php");
+			echo "</div>";
+		}
+		if ($page=="panier"){
+			include("panier.php");
+		}
+		if ($page=="Valider"){
+			include("search.php");
+		}
 	}
-	if ($page=="panier"){
-		include("panier.php");
+	else{
+
 	}
 
 
