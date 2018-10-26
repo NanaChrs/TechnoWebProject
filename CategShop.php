@@ -58,8 +58,25 @@
 
                 while($objet = $objets -> fetch()){
                     echo('<div class = "Objet">');
+                    echo($objet['QteStock']);
+                    echo('      ');
                     echo($objet['Nom']);
-                    echo('</a>');
+                    echo('  ');echo($objet['Prix']);echo('€');
+                    echo('<form form="post">');
+                    echo('<input name="Id" value="'. $objet['IdProduit'] .'"hidden>');
+                    echo('<input name="Nom" value="'. $objet['Nom'] .'"hidden>');
+                    echo('<input name="Prix" value="'. $objet['Prix'] .'"hidden>');
+                    echo('<select multiple name="Quantite">');
+                        for($i=0;$i<=$objet['QteStock'];$i++)
+                        {
+                            echo('"<option value='.$i.'>'.$i);
+                            echo('');
+                            echo('</option>');
+                        }
+                        echo "</select>";
+
+                        echo('<input type="submit" name="page" value="panier">');
+                    echo("</form>");
                     echo('</div>');
                 }
             }
