@@ -26,6 +26,7 @@ if(empty($_SESSION["client"])){
 	}
 }
 else{ 
-	echo'Vous êtes déjà connecté nulos';
+	echo'Vous êtes déjà connecté nulos<input type="button" name="page" value="Deconnexion"/>';
+
 	}
 ?>
