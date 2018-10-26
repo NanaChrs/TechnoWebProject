@@ -2,7 +2,7 @@
 	session_start();
 	include("doctype.php");
 	include("header.php");
-	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
+	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', 'root');}
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
 function getParam($key){
