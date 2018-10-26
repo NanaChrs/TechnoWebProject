@@ -1,15 +1,4 @@
-<?php 
-    /*session_start();
-    try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
-    catch (Exception $e){die('Erreur : ' . $e->getMessage());}*/
 
-
-
-
-
-
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +32,7 @@
                 $categories = $bdd->query("select * from Type");
                 while ($categorie = $categories->fetch()){
                     echo('<div class = "Onglet" >');
-                    echo('<a href="CategShop.php?IdType=');
+                    echo('<a href="index.php?page=categorie&IdType=');
                     echo($categorie['IdType']);
                     echo('">');
                     echo($categorie['Nom']);
