@@ -1,19 +1,21 @@
 
 
 <header>
-	<center>
 		<ul>
-			<a href="index.php"><li>Home</li></a>
-			<a href="traitement_co.php"><li>Connexion ou Inscription</li></a>
+			<a href="index.php?page=index"><li>Home</li></a>
+			<a href="index.php?page=connexion"><li>Connexion ou Inscription</li></a>
 
-			<a href="CategShop.php"><li>Shopping par Catégorie</li></a>
-		    <a href="panier.php"><li>Panier<img src="panierIcon.png" height=15px class="panier"></li></a>
-		    <li><form action="search.php" method="post">	
+			<a href="index.php?page=categorie"><li>Shopping par Catégorie</li></a>
+		    <a href="index.php?page=panier"><li>Panier<img src="Images/panierIcon.png" height=15px class="panier"></li></a>
+		    <li>
 				<input  type="text" name="recherche" id="recherche" placeholder="search.." />
-				<input type="submit" name="search" value="submit">
-			</form></li>
+				<a href="page.php?page=search&search=">	
+				<input type="submit" name="search"> 
+				<?php
+					
+				?>
+			</a></li>
     		
 
 		</ul>
-	</center>
 </header>

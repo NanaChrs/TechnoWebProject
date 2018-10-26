@@ -1,7 +1,7 @@
 <?php 
-    session_start();
+    /*session_start();
     try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
-    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
+    catch (Exception $e){die('Erreur : ' . $e->getMessage());}*/
 
 
 
@@ -22,7 +22,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <?php include("header.php") ?>
+    <!--<?php include("header.php") ?>-->
    
    <!-- <header>
         <center>

@@ -2,32 +2,33 @@ body{
 	font-family: 'Cutive Mono', monospace;
 	background-color: #ffff;
 	color: #5900b3;
-	margin: 0px;
+	margin:0px;
 	padding:0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 h1{
-	position:all;
 	left:0;
-	right:0;
-    background-color: #ffff; 
-    color: #edafb8;
+	right:0; 
+    color: #aec5eb;
 }
 
 h2{
-	position:absolute;
 	margin: 0px;
 	padding: 0px;
-	background: #edafb8;
+	background: #aec5eb;
 	float: left;
 }
 
-ul {
-	position:absolute;
+
+header {
+	display:flex;
+	justify-content: space-around;
 	left:0;
 	right:0;
-    background-color: #aec5eb; 
-    margin: 0px;
+    background-color: #edafb8; 
 	padding:0px;
 }
 
@@ -38,7 +39,6 @@ li {
 
 li:hover {
     color: #f9dec9;
-    background-color: #edafb8;
     border-radius: 5px;
 }
 
@@ -46,21 +46,9 @@ img{
 	float: left;
 }
 
-.panier{
-	float: right;
-}
 
-.inscription{
-	display:flex;
-	justify-content: space-around;
-}
-
-.paiement{
-	display:flex;
-	justify-content: space-around;
-}
 .btn {
-	background-color:#aec5eb;
+	background-color:#ffffff;
 	margin: 10px;
 	color:#5900b3;
 	font-family:'Cutive Mono', monospace;
@@ -71,11 +59,11 @@ img{
 }
 .btn:hover {
 	background-color:#edafb8;
-	color: #f9dec9;
+	color: #e9afa3;
 }
 
-input{
-	background-color:#aec5eb;
+header input{
+	background-color:#edafb8;
 	width:inherit;
 	margin-top: 0px;
 	margin-bottom: 10px;
@@ -90,8 +78,18 @@ label{
 }
 
 .col1{
+	width:40%;
+	align-items: center;
+	display:flex;
+	flex-direction: column;
+}
 
-	width:30%;
+.col2{
+	width:60%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	
 }
 
 table{
@@ -104,9 +102,15 @@ td , th{
 .boutonrond {
 	width:40px;
 	height:40px;
-	background:#edafb8;
+	background:#e9afa3;
 	font:bold 13px Arial;
 	border-radius:50%;
 	border:none;
 	color:#000;
+}
+
+.container{
+	display: flex;
+	justify-content: space-between;
+
 }
