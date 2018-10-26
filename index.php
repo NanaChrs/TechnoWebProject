@@ -5,17 +5,27 @@
 	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
+function getParam($key){
+	if (isset($_GET[$key])){
+		return $_GET[$key];
+	}
+	else if (isset($_POST[$key])){
+		return $_POST[$key];
+	}
+	else return "";
+}
+
+include("sqlfunctions.php");
+
 //TODO get page parameter ($_GET['page'] or $_POST['page']) and assign it into $page variable
-	if (isset($_GET['page'])){
-		$page=$_GET['page'];
+		$page=getParam("page");
 		if ($page=="categorie"){
 			include ("CategShop.php");
 		}
 
 		if ($page=="connexion"){
-			echo "<div id='container'>";
-			include("connexion.php");
-			include("inscription.php");
+			echo "<div class='container'>";
+			include("traitement_co.php");
 			echo "</div>";
 		}
 		if ($page=="panier"){
@@ -24,10 +34,9 @@
 		if ($page=="Valider"){
 			include("search.php");
 		}
-	}
-	else{
-
-	}
+		if ($page=="paiement"){
+			include("paiement.php");
+		}
 
 
 
