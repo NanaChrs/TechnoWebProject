@@ -12,7 +12,8 @@
 </head>
 <body>
 	<center>
-		<h1>Nous vous remercions pour votre achat !</h1>														
+		<h1>Nous vous remercions pour votre achat !</h1>
+		<!-- Bouton pour revenir à la page Catégorie-->														
 		<a href="index.php?page=categorie"><input type="submit" name="shopping" class="btn" value="Continuer sur le site"></a>		
 	</center>
 	
@@ -21,14 +22,19 @@
 		//se connecter à la BDD
 		$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');
 		include("header.php");
-		$tableau = array(array(1,"chaton",100,2),array(2,"chien",50,3));
+
+		$tableau = array(array(1,"chaton",100,1),array(2,"chien",50,1));
 		//$tableau = $_SESSION['panier'];
-		//$bdd->exec('INSERT INTO commande(IdProduit, Nom, Qte, IdClient) VALUES(1, "chat", 1,2)');
-		//$bdd->exec('INSERT INTO commande(IdProduit, Nom, Qte, IdClient) VALUES('.$tableau[0][0].', '.$tableau[0][1].', 1, 2)');
+
+		// On ajoute ce qui a été acheté dans la table 'commande'
 		$NbrLigne=count($tableau)-1;
 		for ($j=0; $j<=$NbrLigne; $j++) {
-		// On ajoute une entrée dans la table jeux_video
-			$bdd->exec('INSERT INTO commande(IdProduit, Nom, Qte, IdClient) VALUES('.$tableau[$j][0].', "'.$tableau[$j][1].'", '.$tableau[$j][3].',2)');
+			$bdd->exec('INSERT INTO commande(IdProduit, Nom, Qte, IdClient) VALUES('.$tableau[$j][0].', "'.$tableau[$j][1].'", '.$tableau[$j][3].',2)'); //il reste à modifier d'IdClient
+		}
+
+		// On retire ce qui a été acheté de la table 'produit'
+		for ($j=0; $j<=$NbrLigne; $j++) {
+			$bdd->exec('UPDATE produit SET QteStock = QteStock -'.$tableau[$j][3].' WHERE IdProduit = '.$tableau[$j][0].'');
 		}
 
 		echo '</div>';
