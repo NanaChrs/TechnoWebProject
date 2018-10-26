@@ -23,8 +23,8 @@
 		$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');
 		include("header.php");
 
-		$tableau = array(array(1,"chaton",100,1),array(2,"chien",50,1));
-		//$tableau = $_SESSION['panier'];
+		//$tableau = array(array(1,"chaton",100,1),array(2,"chien",50,1));
+		$tableau = $_SESSION['panier'];
 
 		// On ajoute ce qui a été acheté dans la table 'commande'
 		$NbrLigne=count($tableau)-1;
