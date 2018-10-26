@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Felindus - Connexion/Inscription</title>
-	<link rel="stylesheet" href="wegotstyle.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
-    <link rel="shortcut icon" href="panierIcon.png"/>
-	<meta charset="utf-8" />
 	<?php
-		//session_start();
-		$tableau = array(array(1,"chaton",100,2),array(2,"chien",50,3));		//$_SESSION['panier']
+		if (isset($_POST[])){
+			$_SESSION['panier'][] = array($_POST['Id'],$_POST['Nom'],$_POST['Prix'],$_POST['Quantite']);
+		}
+		$tableau = $_SESSION['panier'];
 		$NbrLigne=count($tableau)-1;
 		$NbrCol=3;
 		$Prixtoto=0;
