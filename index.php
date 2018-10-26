@@ -37,6 +37,9 @@ include("sqlfunctions.php");
 		if ($page=="paiement"){
 			include("paiement.php");
 		}
+    if ($page=="merci"){
+		  include("merci.php");
+	  }
 
 
 
