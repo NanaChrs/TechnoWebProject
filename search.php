@@ -1,14 +1,8 @@
- 
-
-
- <?php
- 			include('doctype.php');
- 			include("header.php");
- 			echo "<br/> <br/> <br/>";
+<?php
 				$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');
 				
-				if (isset($_POST['recherche'])){
-					$recherche=$_POST['recherche'];
+				if (isset($_GET['recherche'])){
+					$recherche=$_GET['recherche'];
 					$search= $bdd->query("SELECT Nom, Description, Prix FROM produit WHERE LOWER(Nom) LIKE LOWER('%$recherche%')");
 					$entre=0;
 					echo '<div class= "resultats" >';
