@@ -54,7 +54,7 @@
 					<INPUT type="radio" name="choix2" value="6"> Non
 					</FORM>
 					
-				<a href="merci.html"><input name="payer" type="submit" id="payer" value="Payer" class="btn"/></a>
+				<a href="index.php?page=merci"><input name="payer" type="submit" id="payer" value="Payer" class="btn"/></a>
 				</form>
 			</div>
 		</div>

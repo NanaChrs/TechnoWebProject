@@ -27,6 +27,9 @@
 	if ($page=="panier"){
 		include("panier.php");
 	}
+	if ($page=="merci"){
+		include("merci.php");
+	}
 
 
 
