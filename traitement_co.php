@@ -15,7 +15,8 @@ if(empty($_SESSION["client"])){
 		}
 		else {
 			$_SESSION["client"]=$donneesClient;
-			echo '<meta http-equiv="refresh" content="0; URL=index.php"/> ';
+			echo $_SESSION["client"]["Password"];
+			//echo '<meta http-equiv="refresh" content="0; URL=index.php"/> ';
 			}				
 	}
 	else {

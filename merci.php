@@ -20,8 +20,6 @@
 <?php
 		
 		//se connecter à la BDD
-		$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');
-		include("header.php");
 
 		//$tableau = array(array(1,"chaton",100,1),array(2,"chien",50,1));
 		$tableau = $_SESSION['panier'];
