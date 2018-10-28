@@ -5,15 +5,6 @@
 	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
-function getParam($key){
-	if (isset($_GET[$key])){
-		return $_GET[$key];
-	}
-	else if (isset($_POST[$key])){
-		return $_POST[$key];
-	}
-	else return "";
-}
 
 include("sqlfunctions.php");
 

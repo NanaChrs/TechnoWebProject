@@ -3,7 +3,7 @@
 <div class="col2">
 	<h1> Sinon...</h1>
 	
-	<form action="traitement_ins.php" method="post">
+	<form method="post">
 
 
 		<label for="First Name">First Name:</label></br><input type="text" name="First_Name" id="First_Name" />
@@ -23,3 +23,43 @@
 		<input name="Inscription" type="submit" id="inscription" value="Inscrivez-vous !" class="btn"/>
 	</form>
 </div>
+
+<?php
+
+$ins=getParam("inscription");
+$prenom=getParam("First_Name");
+$nom=getParam("Last_Name");
+$birth=getParam("Date_of_Birth");
+$email=getParam("email");
+$email_c=getParam("email_check");
+$pass=getParam("password");
+$pass_c=getParam("password_check");
+
+if ($ins!=""){
+	if ($prenom!="" && $nom!="" && $email!="" && $pass!="" && $pass==$pass_c && $email==$email_c){
+		echo "bjr";
+	}
+	else {
+		if ($pass==""){
+		echo "Vous n'avez pas renseigné de mot de passe.";
+		}
+		else if ($pass!=$pass_c){
+			echo 'les 2 mots de passe ne sont pas identiques';
+		}
+		if ($prenom==""){
+		echo "Veuillez entrer un prénom.";
+		}
+		if ($nom==""){
+		echo 'Veuillez entrer un nom.';
+		}
+		if ($email==""){
+		echo 'Veuillez renseigner un email.';
+		}
+		else if ($email!=$email_c){
+			echo 'Les 2 emails ne sont pas identiques';
+		}
+	}
+}
+	
+
+?>
