@@ -21,6 +21,9 @@ else if ($page=="connexion"){
 else if ($page=="Valider"){
 		include("search.php");
 	}
+else if ($page=="index" || $page==""){
+		var_dump($_SESSION);
+}
 
 else if (!empty($_SESSION["client"])){
 	if ($page=="panier"){
@@ -34,7 +37,7 @@ else if (!empty($_SESSION["client"])){
 	  include("merci.php");
   }
 }
-else {
+else{
 	echo "Pour accéder à cette page veuillez vous connecter";
 	include("traitement_co.php");
 }

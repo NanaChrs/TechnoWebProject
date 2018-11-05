@@ -16,7 +16,8 @@ if(empty($_SESSION["client"])){
 		}
 		else {
 			$_SESSION["client"]=$donneesClient;
-			echo 'Vous êtes connecté walla <meta http-equiv="refresh" content="0; URL=index.php"/> ';
+			echo '<meta http-equiv="refresh" content="0; URL=index.php"/> Vous êtes connecté walla ';
+
 			}				
 	}
 }
