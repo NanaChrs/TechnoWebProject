@@ -80,7 +80,7 @@
                     echo('</div>');
                 }
             }
-            
+            var_dump($_SESSION);
         ?>
 
     </div>

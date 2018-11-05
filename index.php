@@ -5,41 +5,42 @@
 	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
-function getParam($key){
-	if (isset($_GET[$key])){
-		return $_GET[$key];
-	}
-	else if (isset($_POST[$key])){
-		return $_POST[$key];
-	}
-	else return "";
-}
 
 include("sqlfunctions.php");
 
 //TODO get page parameter ($_GET['page'] or $_POST['page']) and assign it into $page variable
-		$page=getParam("page");
-		if ($page=="categorie"){
-			include ("CategShop.php");
-		}
+$page=getParam("page");
+if ($page=="categorie"){
+		include ("CategShop.php");
+	}
+else if ($page=="connexion"){
+		echo "<div class='container'>";
+		include("traitement_co.php");
+		echo "</div>";
+	}
+else if ($page=="Valider"){
+		include("search.php");
+	}
+else if ($page=="index" || $page==""){
+		var_dump($_SESSION);
+}
 
-		if ($page=="connexion"){
-			echo "<div class='container'>";
-			include("traitement_co.php");
-			echo "</div>";
-		}
-		if ($page=="panier"){
-			include("panier.php");
-		}
-		if ($page=="Valider"){
-			include("search.php");
-		}
-		if ($page=="paiement"){
-			include("paiement.php");
-		}
-    if ($page=="merci"){
-		  include("merci.php");
-	  }
+else if (!empty($_SESSION["client"])){
+	if ($page=="panier"){
+		include("panier.php");
+	}
+
+	if ($page=="paiement"){
+		include("paiement.php");
+	}
+	if ($page=="merci"){
+	  include("merci.php");
+  }
+}
+else{
+	echo "Pour accéder à cette page veuillez vous connecter";
+	include("traitement_co.php");
+}
 
 
 

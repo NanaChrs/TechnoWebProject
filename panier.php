@@ -26,9 +26,6 @@
     
 </head>
 <body>
-
-
-		</br></br></br></br></br></br></br></br>
 		<div class="panier">
 			<table><center>
 				<thread bgcolor=#edafb8><tr bgcolor=#edafb8>
