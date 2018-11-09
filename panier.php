@@ -1,6 +1,11 @@
 	<?php
 		if (isset($_GET['Id'])){
+			if (empty($_SESSION['panier'])){
+				$_SESSION['panier'][0] =array($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
+			}
+			else{
 			$_SESSION['panier'][count($_SESSION['panier'])] =array($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
+			}
 		}
 		if (empty($_SESSION['panier'])){
 			$tableau = array(array(" RIEN "," ",0,0));
