@@ -1,6 +1,6 @@
 	<?php
 		if (isset($_GET['Quantite'])){
-			if($_GET['Quantite']==""){
+			if($_GET['Quantite']!=""){
 				if (empty($_SESSION['panier'])){			//Si le client a commander quelque chose et si le panier est vide on le remplie par l'objet commander
 					$_SESSION['panier'][0] =array($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
 				}
