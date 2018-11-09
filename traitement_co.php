@@ -74,7 +74,7 @@ if(empty($_SESSION["client"])){
 	}
 }
 else{ 
-	echo'Vous êtes déjà connecté nulos. Du coup je vous déconnecte';
+	echo'Vous avez été déconnecté.';
 	session_destroy();
 	exit();}
 ?>
