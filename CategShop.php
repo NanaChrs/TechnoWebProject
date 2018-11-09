@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Catégories</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="wegotstyle(Axel).css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="story.css"/>
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <link rel="shortcut icon" href="panierIcon.png"/>
 </head>
