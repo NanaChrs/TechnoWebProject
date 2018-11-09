@@ -5,9 +5,19 @@
 					$_SESSION['panier'][0] =array($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
 				}
 				else{										//Si le panier est pas vide on ajoute a la suite l'objet commander dans le panier
-				$_SESSION['panier'][count($_SESSION['panier'])] =array($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
+					for($k=0;$k<count($_SESSION['panier']);$k++){
+						if($_SESSION['panier'][$k][0]==$_GET['Id']){
+							$positionduproduit=$k;
+						}	
+					}
+					if($_SESSION['panier'][$positionduproduit][0]==$_GET['Id']){
+						$_SESSION['panier'][$positionduproduit][3]+=$_GET['Quantite'];
+					}
+					else{
+						$_SESSION['panier'][count($_SESSION['panier'])] =array($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
+					}
 				}
-				unset($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
+				header('Location:index.php?page=panier');
 			}
 		}
 		if (empty($_SESSION['panier'])){				//Si le panier est vide affiche au client qu'il n'a rien commander
@@ -30,9 +40,10 @@
 		$NbrLigne=count($tableau)-1;
 		$NbrCol=3;
 		$Prixtoto=0;
-		//var_dump($_SESSION); fonction très utile ^^
+		var_dump($_SESSION); //fonction très utile ^^
+		var_dump($_SERVER['PHP_SELF']);
 	?>
-
+ 
 
     
 </head>
