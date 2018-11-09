@@ -10,7 +10,9 @@
 					while ($req = $search->fetch()){
 						$entre=1;
 						echo '<div class="resultat">';
-						echo '<img src="'.$req['image'].'">';
+						if(isset($req['image'])){
+							echo '<img src="'.$req['image'].'">';
+						}
 						echo $req['Nom']. "\r";
 						echo $req['Description']. "\r";
 						echo $req['Prix']. "\r";
