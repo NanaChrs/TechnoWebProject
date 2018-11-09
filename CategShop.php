@@ -76,7 +76,7 @@
                         //echo "</select>";
                         echo('<input type="number" min="1" max ="');
                         echo($i-1);
-                        echo('" name="Quantite">');
+                        echo('" name="Quantite" value="1">');
                         echo('<input type="submit" name="page" value="panier">');
                     echo("</form>");
                     echo('</div>');
