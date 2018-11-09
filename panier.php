@@ -1,12 +1,14 @@
 	<?php
 		if (isset($_GET['Quantite'])){
-			if (empty($_SESSION['panier'])){			//Si le client a commander quelque chose et si le panier est vide on le remplie par l'objet commander
-				$_SESSION['panier'][0] =array($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
+			if($_GET['Quantite']==""){
+				if (empty($_SESSION['panier'])){			//Si le client a commander quelque chose et si le panier est vide on le remplie par l'objet commander
+					$_SESSION['panier'][0] =array($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
+				}
+				else{										//Si le panier est pas vide on ajoute a la suite l'objet commander dans le panier
+				$_SESSION['panier'][count($_SESSION['panier'])] =array($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
+				}
+				unset($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
 			}
-			else{										//Si le panier est pas vide on ajoute a la suite l'objet commander dans le panier
-			$_SESSION['panier'][count($_SESSION['panier'])] =array($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
-			}
-			unset($_GET['Id'],$_GET['Nom'],$_GET['Prix'],$_GET['Quantite']);
 		}
 		if (empty($_SESSION['panier'])){				//Si le panier est vide affiche au client qu'il n'a rien commander
 			$tableau = array(array(" RIEN "," ",0,0));
