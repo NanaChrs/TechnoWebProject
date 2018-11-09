@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 12 oct. 2018 à 18:46
+-- Généré le :  ven. 09 nov. 2018 à 13:41
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -56,13 +56,22 @@ INSERT INTO `clients` (`Id`, `Nom`, `Prenom`, `Telephone`, `Mail`, `Password`, `
 
 DROP TABLE IF EXISTS `commande`;
 CREATE TABLE IF NOT EXISTS `commande` (
-  `Id` int(11) NOT NULL,
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `IdProduit` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL,
   `Qte` int(11) NOT NULL,
   `IdClient` int(11) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `commande`
+--
+
+INSERT INTO `commande` (`Id`, `IdProduit`, `Nom`, `Qte`, `IdClient`) VALUES
+(32, 4, 'chien', 2, 1),
+(33, 2, 'Chaton mignon', 1, 1),
+(34, 2, 'Chaton mignon', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -86,12 +95,12 @@ CREATE TABLE IF NOT EXISTS `produit` (
 --
 
 INSERT INTO `produit` (`IdProduit`, `Nom`, `Prix`, `QteStock`, `Description`, `IdType`) VALUES
-(1, 'Chaton', 100, 5, 'Chaton tout doux qui aime les câlins', 1),
-(2, 'Chaton mignon', 2000, 12, 'Un chaton mignon cher', 1),
+(1, 'Chaton', 100, -2, 'Chaton tout doux qui aime les câlins', 1),
+(2, 'Chaton mignon', 2000, 5, 'Un chaton mignon cher', 1),
 (3, 'Chaton moins mignon', 1, 45632, 'des trucs', 1),
-(4, 'chien', 500, 100, 'chien', 2),
-(5, 'Chien blanc crême brûler', 100000, 1, 'un chien creme bruelr qui  le meme gouts', 2),
-(6, 'Cheval sans patte', 1, 123, '', 3);
+(4, 'chien', 500, 95, 'chien', 2),
+(5, 'Chien blanc crême brûler', 100000, 0, 'un chien creme bruelr qui  le meme gouts', 2),
+(6, 'Cheval sans patte', 1, 114, '', 3);
 
 -- --------------------------------------------------------
 
