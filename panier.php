@@ -55,7 +55,14 @@
 				<td colspan="7"><center>Prix Total : <?php echo $Prixtoto; ?></center></td>
 			 	</tr></tbody>
 				<tfoot><tr bgcolor=#edafb8>
- 				<td colspan="7"><center><a href="index.php?page=paiement"><input name="valider" type="submit" id="valider" value="Valider" class="btn"/></a></center></td>
+				<?php
+				if (empty($_SESSION['panier'])){
+ 				echo '<td colspan="7"><center><a href="index.php?page=panier"><input name="valider" type="submit" id="valider" value="Valider" class="btn"/></a></center></td>';
+ 				}
+ 				else{
+ 				echo '<td colspan="7"><center><a href="index.php?page=paiement"><input name="valider" type="submit" id="valider" value="Valider" class="btn"/></a></center></td>';
+ 				}
+ 				?>
 				</tr></tfoot>
 			</center></table>	
 		</div>
