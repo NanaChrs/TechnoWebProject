@@ -20,6 +20,9 @@
 			unset($_SESSION['panier']);
 			$_SESSION['panier']=$temp;
 			$tableau = $_SESSION['panier'];
+			if (empty($_SESSION['panier'])){
+				$tableau = array(array(" RIEN "," ",0,0));
+			}
 		}
 		$NbrLigne=count($tableau)-1;
 		$NbrCol=3;
