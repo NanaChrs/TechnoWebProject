@@ -65,8 +65,17 @@
                 $objets -> execute(array($_GET['IdType']));
 
                 while($objet = $objets -> fetch()){
+
                     echo('<div class = "Objet">');
-                    echo($objet['QteStock'] - $panier[$objet['Nom']][3]);
+                    if (isset($panier[$objet['Nom']][3])) { //degage les erreuers, meme si elle ne font rien de mal
+                        echo($objet['QteStock'] - $panier[$objet['Nom']][3]);
+                    }
+                    else{
+                        echo($objet['QteStock']);
+                    }
+
+
+                    
                     echo('      ');
                     echo($objet['Nom']);
                     echo('  ');echo($objet['Prix']);echo('€');
