@@ -24,7 +24,7 @@
 				<h1>Panier</h1>
 					<p>-...</br>-...</br>-...</p>				
 				<h1>Total Panier : ...€</h1>										
-				<a href="panier.html"><input type="button" name="modifier" class="btn" value="Modifier"></a>		
+				<a href="panier.php"><input type="button" name="modifier" class="btn" value="Modifier"></a>		
 				
 			</div>
 
