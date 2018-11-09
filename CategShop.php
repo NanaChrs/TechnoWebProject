@@ -66,15 +66,17 @@
                     echo('<input name="Id" value="'. $objet['IdProduit'] .'"hidden>');
                     echo('<input name="Nom" value="'. $objet['Nom'] .'"hidden>');
                     echo('<input name="Prix" value="'. $objet['Prix'] .'"hidden>');
-                    echo('<select multiple name="Quantite">');
+                    //echo('<select multiple name="Quantite">');
                         for($i=0;$i<=$objet['QteStock'];$i++)
                         {
-                            echo('"<option value='.$i.'>'.$i);
-                            echo('');
-                            echo('</option>');
+                            //echo('"<option value='.$i.'>'.$i);
+                            //echo('');
+                            //echo('</option>');
                         }
-                        echo "</select>";
-
+                        //echo "</select>";
+                        echo('<input type="number" min="1" max ="');
+                        echo($i-1);
+                        echo('" name="Quantite">');
                         echo('<input type="submit" name="page" value="panier">');
                     echo("</form>");
                     echo('</div>');
