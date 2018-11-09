@@ -29,7 +29,6 @@
 		</div>		
 		<div style ="width:50%; flex-wrap: wrap;">
 		<h1> Paiement</h1>
-			<form action="traitement_co.php" method="post">
 			<label for="choix1">Indiquez les informations correspondant à votre carte :</label>
 			<INPUT type="radio" name="choix1" value="1"> Visa
 			<INPUT type="radio" name="choix1" value="2"> Master Card
@@ -54,7 +53,6 @@
 			<INPUT type="radio" name="choix2" value="6"> Non
 			</br></br>
 		<a href="index.php?page=merci"><input name="payer" type="submit" id="payer" value="Payer" class="btn"/></a>
-		</form>
 		</div>
 	</div>
 </body>
