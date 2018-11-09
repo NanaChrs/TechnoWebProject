@@ -57,7 +57,7 @@
                 foreach ($_SESSION['panier'] as $ligne ) {
                     $panier[$ligne[1]] = $ligne;
                 }
-                var_dump($panier);
+                //var_dump($panier);
             }
 
             if(isset($_GET['IdType'])){
@@ -93,13 +93,13 @@
                         //echo "</select>";
                         echo('<input type="number" min="1" max ="');
                         echo($i-1);
-                        echo('" name="Quantite" value="1">');
+                        echo('" name="Quantite" placeholder="Quantité, Ex : 3">');
                         echo('<input type="submit" name="page" value="panier">');
                     echo("</form>");
                     echo('</div>');
                 }
             }
-            var_dump($_SESSION);
+            //var_dump($_SESSION);
         ?>
 
     </div>
