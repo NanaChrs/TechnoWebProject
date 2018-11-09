@@ -19,12 +19,18 @@
 
 
 			<div class="col1">
-				
-					<br><br>
-				<h1>Panier</h1>
-					<p>-...</br>-...</br>-...</p>				
-				<h1>Total Panier : ...€</h1>										
-				<a href="panier.php"><input type="button" name="modifier" class="btn" value="Modifier"></a>		
+
+				<?php
+					$tableau = $_SESSION['panier'];
+					$NbrLigne=count($tableau)-1;
+					$Prixtoto=0;
+					for ($i=0; $i<=$NbrLigne; $i++) {
+							$Prixtoto+=$tableau[$i][2]*$tableau[$i][3];
+						}
+				?>			
+				<h1>Total Panier : <?php echo $Prixtoto; ?>€</h1>
+
+				<a href="index.php?page=panier"><input type="button" name="modifier" class="btn" value="Modifier"></a>		
 				
 			</div>
 
@@ -57,8 +63,6 @@
 				</form>
 			</div>
 		</div>
-    
-
 </body>
 
 </html>
