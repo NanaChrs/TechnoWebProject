@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 09 nov. 2018 à 13:41
+-- Généré le :  ven. 09 nov. 2018 à 16:31
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -36,9 +36,9 @@ CREATE TABLE IF NOT EXISTS `clients` (
   `Telephone` varchar(10) NOT NULL,
   `Mail` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
-  `Adresse` text NOT NULL,
+  `Adresse` text,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `clients`
@@ -46,7 +46,8 @@ CREATE TABLE IF NOT EXISTS `clients` (
 
 INSERT INTO `clients` (`Id`, `Nom`, `Prenom`, `Telephone`, `Mail`, `Password`, `Adresse`) VALUES
 (1, 'JAROSSET', 'Corentin', '0606060606', 'corentinjarosset@nulos.fr', 'cacafraise', '69 rue des nulos\r\n59000 Lille\r\n(Avec Antoine)'),
-(2, 'FLEURY', 'Antoine', '0602010230', 'antoinefleury@nulos.fr', 'ilovetosuckdicks', 'Avec Corentin');
+(2, 'FLEURY', 'Antoine', '0602010230', 'antoinefleury@nulos.fr', 'ilovetosuckdicks', 'Avec Corentin'),
+(3, 'fleury', 'antoine', '652696874', 'antoinefleury3@gmail.com', 'tr', NULL);
 
 -- --------------------------------------------------------
 
@@ -62,13 +63,16 @@ CREATE TABLE IF NOT EXISTS `commande` (
   `Qte` int(11) NOT NULL,
   `IdClient` int(11) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `commande`
 --
 
 INSERT INTO `commande` (`Id`, `IdProduit`, `Nom`, `Qte`, `IdClient`) VALUES
+(35, 2, 'Chaton mignon', 2, 1),
+(36, 6, 'Cheval sans patte', 1, 1),
+(37, 4, 'chien', 1, 1),
 (32, 4, 'chien', 2, 1),
 (33, 2, 'Chaton mignon', 1, 1),
 (34, 2, 'Chaton mignon', 5, 1);
@@ -96,11 +100,11 @@ CREATE TABLE IF NOT EXISTS `produit` (
 
 INSERT INTO `produit` (`IdProduit`, `Nom`, `Prix`, `QteStock`, `Description`, `IdType`) VALUES
 (1, 'Chaton', 100, -2, 'Chaton tout doux qui aime les câlins', 1),
-(2, 'Chaton mignon', 2000, 5, 'Un chaton mignon cher', 1),
+(2, 'Chaton mignon', 2000, 3, 'Un chaton mignon cher', 1),
 (3, 'Chaton moins mignon', 1, 45632, 'des trucs', 1),
-(4, 'chien', 500, 95, 'chien', 2),
+(4, 'chien', 500, 94, 'chien', 2),
 (5, 'Chien blanc crême brûler', 100000, 0, 'un chien creme bruelr qui  le meme gouts', 2),
-(6, 'Cheval sans patte', 1, 114, '', 3);
+(6, 'Cheval sans patte', 1, 113, '', 3);
 
 -- --------------------------------------------------------
 
