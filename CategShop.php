@@ -67,7 +67,7 @@
                     echo('<input name="Nom" value="'. $objet['Nom'] .'"hidden>');
                     echo('<input name="Prix" value="'. $objet['Prix'] .'"hidden>');
                     //echo('<select multiple name="Quantite">');
-                        for($i=0;$i<=$objet['QteStock'];$i++)
+                        for($i=0;$i<=$objet['QteStock'];$i++) //residu qui compte la quantité des stocks, inutile
                         {
                             //echo('"<option value='.$i.'>'.$i);
                             //echo('');
