@@ -52,13 +52,21 @@
 
     <div class = "cadre">
         <?php
+
+            if(true){//isset($_SESSION['Panier']) and !empty($_SESSION['Panier'])){
+                foreach ($_SESSION['panier'] as $ligne ) {
+                    $panier[$ligne[1]] = $ligne;
+                }
+                var_dump($panier);
+            }
+
             if(isset($_GET['IdType'])){
                 $objets = $bdd -> prepare("select * from produit where IdType = ?");
                 $objets -> execute(array($_GET['IdType']));
 
                 while($objet = $objets -> fetch()){
                     echo('<div class = "Objet">');
-                    echo($objet['QteStock']);
+                    echo($objet['QteStock'] - $panier[$objet['Nom']][3]);
                     echo('      ');
                     echo($objet['Nom']);
                     echo('  ');echo($objet['Prix']);echo('€');
