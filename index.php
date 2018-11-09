@@ -22,7 +22,7 @@ else if ($page=="Valider"){
 		include("search.php");
 	}
 else if ($page=="index" || $page==""){
-		var_dump($_SESSION);
+		//var_dump($_SESSION);
 }
 
 else if (!empty($_SESSION["client"])){

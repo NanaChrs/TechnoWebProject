@@ -40,8 +40,8 @@
 		$NbrLigne=count($tableau)-1;
 		$NbrCol=3;
 		$Prixtoto=0;
-		var_dump($_SESSION); //fonction très utile ^^
-		var_dump($_SERVER['PHP_SELF']);
+		//var_dump($_SESSION); //fonction très utile ^^
+		//var_dump($_SERVER['PHP_SELF']);
 	?>
  
 
