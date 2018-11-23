@@ -60,6 +60,8 @@
                     echo('<div class = "Objet">');
                     echo($objet['QteStock']);
                     echo('      ');
+                    //echo '<img src="Images/"'.$objet['Photo'].'>';
+                    echo('<img src="Images/'.$objet['Photo'].'"height=30% width=30%/>');
                     echo($objet['Nom']);
                     echo('  ');echo($objet['Prix']);echo('€');
                     echo('<form form="post">');

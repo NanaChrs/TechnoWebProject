@@ -1,6 +1,6 @@
 body{
 	font-family: 'Cutive Mono', monospace;
-	background-color: #ffff;
+	background-color: rgb(255, 255, 255);
 	color: #ffffff;
 	display : flex;
 	flex-direction : column;
@@ -13,6 +13,15 @@ body{
 	max-height: 1.5em;
 	overflow : hidden;
 	overflow-y: scroll;
+}
+
+.cadre{
+	display: flex;
+	flex-direction: column;
+}
+
+.Objet{
+	margin-bottom:2%;
 }
 
 .cadre .Objet select:hover{
