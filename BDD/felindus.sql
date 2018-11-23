@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 09 nov. 2018 à 16:31
+-- Généré le :  ven. 23 nov. 2018 à 14:17
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `clients` (
   `Password` varchar(255) NOT NULL,
   `Adresse` text,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `clients`
@@ -47,7 +47,10 @@ CREATE TABLE IF NOT EXISTS `clients` (
 INSERT INTO `clients` (`Id`, `Nom`, `Prenom`, `Telephone`, `Mail`, `Password`, `Adresse`) VALUES
 (1, 'JAROSSET', 'Corentin', '0606060606', 'corentinjarosset@nulos.fr', 'cacafraise', '69 rue des nulos\r\n59000 Lille\r\n(Avec Antoine)'),
 (2, 'FLEURY', 'Antoine', '0602010230', 'antoinefleury@nulos.fr', 'ilovetosuckdicks', 'Avec Corentin'),
-(3, 'fleury', 'antoine', '652696874', 'antoinefleury3@gmail.com', 'tr', NULL);
+(18, 'tr', 'tr', '01215487', 'tr@tr.fr', 'tr', NULL),
+(17, 'Malbranque', 'Louis', '614014164', 'loui@truc.fr', 'tr', NULL),
+(15, 'truc', 'truc', '0512458457', 'truc@truc.fr', 'truc', NULL),
+(16, 'Christiaens', 'Mathilde', '750889070', 'mathildechristiaens@hotmail.fr', 'tr', NULL);
 
 -- --------------------------------------------------------
 
@@ -63,19 +66,18 @@ CREATE TABLE IF NOT EXISTS `commande` (
   `Qte` int(11) NOT NULL,
   `IdClient` int(11) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `commande`
 --
 
 INSERT INTO `commande` (`Id`, `IdProduit`, `Nom`, `Qte`, `IdClient`) VALUES
-(35, 2, 'Chaton mignon', 2, 1),
-(36, 6, 'Cheval sans patte', 1, 1),
-(37, 4, 'chien', 1, 1),
 (32, 4, 'chien', 2, 1),
 (33, 2, 'Chaton mignon', 1, 1),
-(34, 2, 'Chaton mignon', 5, 1);
+(34, 2, 'Chaton mignon', 5, 1),
+(35, 4, 'chien', 3, 1),
+(36, 6, 'Cheval sans patte', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -89,6 +91,7 @@ CREATE TABLE IF NOT EXISTS `produit` (
   `Nom` varchar(255) NOT NULL,
   `Prix` int(11) NOT NULL,
   `QteStock` int(11) NOT NULL,
+  `Photo` varchar(255) NOT NULL,
   `Description` text NOT NULL,
   `IdType` int(11) NOT NULL,
   PRIMARY KEY (`IdProduit`)
@@ -98,13 +101,13 @@ CREATE TABLE IF NOT EXISTS `produit` (
 -- Déchargement des données de la table `produit`
 --
 
-INSERT INTO `produit` (`IdProduit`, `Nom`, `Prix`, `QteStock`, `Description`, `IdType`) VALUES
-(1, 'Chaton', 100, -2, 'Chaton tout doux qui aime les câlins', 1),
-(2, 'Chaton mignon', 2000, 3, 'Un chaton mignon cher', 1),
-(3, 'Chaton moins mignon', 1, 45632, 'des trucs', 1),
-(4, 'chien', 500, 94, 'chien', 2),
-(5, 'Chien blanc crême brûler', 100000, 0, 'un chien creme bruelr qui  le meme gouts', 2),
-(6, 'Cheval sans patte', 1, 113, '', 3);
+INSERT INTO `produit` (`IdProduit`, `Nom`, `Prix`, `QteStock`, `Photo`, `Description`, `IdType`) VALUES
+(1, 'Chaton', 100, -2, 'chatonmignon.jpg', 'Chaton tout doux qui aime les câlins', 1),
+(2, 'Chaton mignon', 2000, 5, 'kitten2.jpg', 'Un chaton mignon cher', 1),
+(3, 'Chaton moins mignon', 1, 45632, 'chatonmoche.jpg', 'des trucs', 1),
+(4, 'chien', 500, 92, 'chien.jpg', 'chien', 2),
+(5, 'Chien blanc crême brûler', 100000, 0, 'chienlanccrème.jpg', 'un chien creme bruelr qui  le meme gouts', 2),
+(6, 'Cheval sans patte', 1, 113, 'chevalsanspatte.jpg', '', 3);
 
 -- --------------------------------------------------------
 
