@@ -1,12 +1,13 @@
 <?php
 	session_start();
+	include("sqlfunctions.php");
 	include("doctype.php");
 	include("header.php");
 	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
 
-include("sqlfunctions.php");
+
 
 //TODO get page parameter ($_GET['page'] or $_POST['page']) and assign it into $page variable
 $page=getParam("page");
