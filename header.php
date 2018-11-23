@@ -9,7 +9,7 @@
 		}
 		else{																		//sinon
 			echo '<a href="index.php?page=connexion"><li>Se déconnecter</li></a>'; 	//affiche le bouton "Se déconnecter"
-			if (!is_null($_SESSION["client"]["Admin"])){ 							//si le client est un admin :
+			if (($_SESSION["client"]["Admin"])){ 								//si le client est un admin :
 				echo '<a href="index.php?page=admin"><li>Page Admin</li></a>'; 		//afiche un bouton "Page Admin"
 			}
 		}

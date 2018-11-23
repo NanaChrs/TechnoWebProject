@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 23 nov. 2018 à 14:17
+-- Généré le :  ven. 23 nov. 2018 à 16:19
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -37,6 +37,7 @@ CREATE TABLE IF NOT EXISTS `clients` (
   `Mail` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
   `Adresse` text,
+  `Admin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
@@ -44,13 +45,13 @@ CREATE TABLE IF NOT EXISTS `clients` (
 -- Déchargement des données de la table `clients`
 --
 
-INSERT INTO `clients` (`Id`, `Nom`, `Prenom`, `Telephone`, `Mail`, `Password`, `Adresse`) VALUES
-(1, 'JAROSSET', 'Corentin', '0606060606', 'corentinjarosset@nulos.fr', 'cacafraise', '69 rue des nulos\r\n59000 Lille\r\n(Avec Antoine)'),
-(2, 'FLEURY', 'Antoine', '0602010230', 'antoinefleury@nulos.fr', 'ilovetosuckdicks', 'Avec Corentin'),
-(18, 'tr', 'tr', '01215487', 'tr@tr.fr', 'tr', NULL),
-(17, 'Malbranque', 'Louis', '614014164', 'loui@truc.fr', 'tr', NULL),
-(15, 'truc', 'truc', '0512458457', 'truc@truc.fr', 'truc', NULL),
-(16, 'Christiaens', 'Mathilde', '750889070', 'mathildechristiaens@hotmail.fr', 'tr', NULL);
+INSERT INTO `clients` (`Id`, `Nom`, `Prenom`, `Telephone`, `Mail`, `Password`, `Adresse`, `Admin`) VALUES
+(1, 'JAROSSET', 'Corentin', '0606060606', 'corentinjarosset@nulos.fr', '041097', '69 rue des nulos\r\n59000 Lille\r\n(Avec Antoine)', NULL),
+(2, 'FLEURY', 'Antoine', '0602010230', 'antoinefleury@nulos.fr', '180997', 'Avec Corentin', NULL),
+(18, 'tr', 'tr', '01215487', 'tr@tr.fr', 'tr', NULL, NULL),
+(17, 'Malbranque', 'Louis', '614014164', 'loui@truc.fr', 'tr', NULL, NULL),
+(15, 'truc', 'truc', '0512458457', 'truc@truc.fr', 'truc', NULL, NULL),
+(16, 'Christiaens', 'Mathilde', '750889070', 'mathildechristiaens@hotmail.fr', 'tr', NULL, 1);
 
 -- --------------------------------------------------------
 
