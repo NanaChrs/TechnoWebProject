@@ -36,6 +36,9 @@ else if (!empty($_SESSION["client"])){
 	if ($page=="merci"){
 	  include("merci.php");
   }
+  if ($page=="admin"){
+	  include("admin.php");
+  }
 }
 else{
 	echo "Pour accéder à cette page veuillez vous connecter";

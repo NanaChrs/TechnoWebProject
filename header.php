@@ -4,13 +4,15 @@
 	<ul>
 		<a href="index.php?page=index"><li>Home</li></a>
 		<?php 
-		if (empty($_SESSION["client"])){
-			echo '<a href="index.php?page=connexion"><li>Connexion ou Inscription</li></a>';
+		if (empty($_SESSION["client"])){											//si aucun client n'est connecté :
+			echo '<a href="index.php?page=connexion"><li>Connexion ou Inscription</li></a>'; //affiche le bouton "Connexion ou Inscription"
 		}
-		else{
-			echo '<a href="index.php?page=connexion"><li>Se déconnecter</li></a>';
+		else{																		//sinon
+			echo '<a href="index.php?page=connexion"><li>Se déconnecter</li></a>'; 	//affiche le bouton "Se déconnecter"
+			if (!is_null($_SESSION["client"]["Admin"])){ 							//si le client est un admin :
+				echo '<a href="index.php?page=admin"><li>Page Admin</li></a>'; 		//afiche un bouton "Page Admin"
+			}
 		}
-
 		?>
 
 		<a href="index.php?page=categorie"><li>Shopping par Catégorie</li></a>
