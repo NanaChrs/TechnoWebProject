@@ -22,10 +22,18 @@ if(empty($_SESSION["client"])){
 				echo '</div>';
 			}
 			else {
-				$_SESSION["client"]=$donneesClient;
+					//include("sqlfunctions.php");
+				echo(getParam('remember'));
+				if((getParam('remember')=="1") && !empty($_SESSION["client"])){ //si connecter & remember coché
+					$_SESSION['setCookies'] = true;
+				}
 				echo '<meta http-equiv="refresh" content="0; URL=index.php?page=index"/> ';
+				//setcookie('pseudo', 'M@teo21', time() + 365*24*3600, null, null, false, true);
+				$_SESSION["client"]=$donneesClient;
+							//var_dump($_SESSION);
+							
 
-			}
+						}
 		}									
 	}
 	else if ($prenom!=""){

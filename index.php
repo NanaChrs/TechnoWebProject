@@ -1,12 +1,26 @@
 <?php
 	session_start();
+	include("sqlfunctions.php");
 	include("doctype.php");
 	include("header.php");
 	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
+	
+/*if(!empty($_SESSION)){
+	if($_SESSION['setCookies']){
+			foreach ($_SESSION['client'] as $key => $value) {
+			echo('cookie '. $key .' cree !');
+		
+			setcookie($key,$value,time() + 365*24*3600, null, null, false, true);
+			}
+	}
+}
 
-include("sqlfunctions.php");
+//var_dump($_SESSION);
+//var_dump($_COOKIE['nom']);
+//var_dump(getParam('remember'));*/
+
 
 //TODO get page parameter ($_GET['page'] or $_POST['page']) and assign it into $page variable
 $page=getParam("page");
