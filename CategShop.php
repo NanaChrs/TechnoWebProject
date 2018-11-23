@@ -53,7 +53,7 @@
     <div class = "cadre">
         <?php
 
-            if(true){//isset($_SESSION['Panier']) and !empty($_SESSION['Panier'])){
+            if(isset($_SESSION['Panier']) and !empty($_SESSION['Panier'])){
                 foreach ($_SESSION['panier'] as $ligne ) {
                     $panier[$ligne[1]] = $ligne;
                 }
