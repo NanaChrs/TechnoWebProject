@@ -11,39 +11,9 @@
 
 //TODO get page parameter ($_GET['page'] or $_POST['page']) and assign it into $page variable
 $page=getParam("page");
-if ($page=="categorie"){
-		include ("CategShop.php");
-	}
-else if ($page=="connexion"){
-		echo "<div class='container'>";
-		include("traitement_co.php");
-		echo "</div>";
-	}
-else if ($page=="Valider"){
-		include("search.php");
-	}
-else if ($page=="index" || $page==""){
-		//var_dump($_SESSION);
-}
-
-else if (!empty($_SESSION["client"])){
-	if ($page=="panier"){
-		include("panier.php");
-	}
-
-	if ($page=="paiement"){
-		include("paiement.php");
-	}
-	if ($page=="merci"){
-	  include("merci.php");
-  }
-  if ($page=="admin"){
-	  include("admin.php");
-  }
-}
-else{
-	echo "Pour accéder à cette page veuillez vous connecter";
-	include("traitement_co.php");
+//echo ''.$page .'.php';
+if(file_exists(''.$page .'.php') && $page!="index"){
+	include(''.$page .'.php');
 }
 
 
