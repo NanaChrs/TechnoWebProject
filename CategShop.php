@@ -92,7 +92,7 @@
                         }
                         //echo "</select>";
                         echo('<input type="number" min="1" max ="');
-                        echo($i-1);
+                        echo($i-1);//resultat du for au dessus
                         echo('" name="Quantite" placeholder="Quantité, Ex : 3">');
                         echo('<input type="submit" name="page" value="panier">');
                     echo("</form>");
