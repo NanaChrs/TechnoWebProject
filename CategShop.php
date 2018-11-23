@@ -32,7 +32,7 @@
                 $categories = $bdd->query("select * from Type");
                 while ($categorie = $categories->fetch()){
                     echo('<div class = "Onglet" >');
-                    echo('<a href="index.php?page=categorie&IdType=');
+                    echo('<a href="index.php?page=CategShop&IdType=');
                     echo($categorie['IdType']);
                     echo('">');
                     echo($categorie['Nom']);

@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Catégories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="wegotstyle(Axel).css"/>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+    <link rel="shortcut icon" href="panierIcon.png"/>
+</head>
+
 <?php
 	$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');
 				
@@ -7,7 +18,7 @@
 		//$search= $bdd->query("SELECT Nom, Description, Prix FROM produit WHERE LOWER(Nom) LIKE LOWER('%$recherche%')"); //ancienne requete SQL
 		$search= $bdd->query("SELECT * FROM produit WHERE LOWER(Nom) LIKE LOWER('%$recherche%')");
 		$entre=0;
-		echo '<div class= "resultats" >';
+		echo '<div class= "cadre" >';
 		echo 'résultats pour ' . $recherche . ":\r";	
 
 		while ($objet = $search->fetch()){ //objet au lieu de req
@@ -15,6 +26,7 @@
 			echo('<div class = "Objet">');
 			echo($objet['QteStock']);
 			echo('      ');
+			echo('<img src="Images/'.$objet['Photo'].'"height=30% width=30%/>');
 			echo($objet['Nom']);
 			echo('  ');echo($objet['Prix']);echo('€');
 			echo('<form form="post">');
