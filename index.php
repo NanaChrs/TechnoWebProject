@@ -34,7 +34,7 @@ else{
 
 // TODO insert the start html envelope (<html><head>....</head><body>
 	echo "<html><head>";// </head><body>";
-	echo("<center><h1> Bienvenue à Fèlindus ! </h1></center>");
+	echo("<center><h1> Bienvenue à Félindus ! </h1></center>");
 	echo("<center><img src='Images/pup1.jpg' class='center' height=50% width=50%></center>");
 	echo("<h2> Si vous cherechez votre nouveu meilleur ami (qui est un animal), vouz êtes à la parfait e-magasin !");
 
