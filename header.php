@@ -2,8 +2,9 @@
 
 <header>
 	<ul>
-		<a href="index.php?page=index"><li>Home</li></a>
+		<a href="index.php?page=index"><li>Page d'Accueil</li></a>
 		<?php 
+		
 		if (empty($_SESSION["client"])){											//si aucun client n'est connecté :
 			echo '<a href="index.php?page=traitement_co"><li>Connexion ou Inscription</li></a>'; //affiche le bouton "Connexion ou Inscription"
 		}

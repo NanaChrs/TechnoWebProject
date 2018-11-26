@@ -3,7 +3,7 @@
 	include("sqlfunctions.php");
 	include("doctype.php");
 	include("header.php");
-	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');}
+	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');} # remove second root to work on PC
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
 
@@ -33,7 +33,12 @@ if(file_exists(''.$page .'.php') && $page!="index"){
 // to insert or update data into database
 
 // TODO insert the start html envelope (<html><head>....</head><body>
-	echo "<html><head> </head><body>";
+	echo "<html><head>";// </head><body>";
+	if($page=='index'){
+		echo("<center><h1> Bienvenue à Fèlindus ! </h1></center>");
+		echo("<center><img src='Images/pup1.jpg' class='center' height=50% width=50%></center>");
+		echo("<h2> Si vous cherechez votre nouveu meilleur ami (qui est un animal), vouz êtes à la parfait e-magasin !");
+	}
 // TODO using $page decide to include header.php
 
 //TODO add header display

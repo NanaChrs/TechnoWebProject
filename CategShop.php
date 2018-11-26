@@ -5,23 +5,12 @@
     <meta charset="utf-8" />
     <title>Catégories</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="wegotstyle(Axel).css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="story.css"/>
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <link rel="shortcut icon" href="panierIcon.png"/>
 </head>
 <body>
     <!--<?php include("header.php") ?>-->
-   
-   <!-- <header>
-        <center>
-            <ul>
-                <a href="index.php"><li>Home</li></a>
-                <a href="connexion_inscription.html"><li>Connexion ou Inscription</li></a>
-                <a href="CategShop.php"><li>Shopping par Catégorie</li></a>
-                <a href="panier.php"><li>Panier<img src="panierIcon.png" height=15px class="panier"></li></a>
-            </ul>
-        </center>
-    </header> -->
 
 <div class="Corps">
 

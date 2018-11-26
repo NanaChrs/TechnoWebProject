@@ -1,0 +1,229 @@
+body{
+	font-family: 'Cutive Mono', monospace;
+	background-color: #ffff;
+	color: #5900b3;
+	margin:0px;
+	padding:0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+}
+
+h1{
+	left:0;
+	right:0; 
+    color: #aec5eb;
+}
+
+h2{
+	margin: 0px;
+	padding: 0px;
+	background: #aec5eb;
+	float: left;
+}
+
+
+header {
+	display:flex;
+	justify-content: space-around;
+	left:0;
+	right:0;
+    background-color: #edafb8; 
+	padding:0px;
+}
+
+li {
+    display:inline-block;
+    padding: 14px 16px;
+}
+
+li:hover {
+    color: #f9dec9;
+    border-radius: 5px;
+}
+
+.btn {
+	background-color:#ffffff;
+	margin: 10px;
+	color:#5900b3;
+	font-family:'Cutive Mono', monospace;
+	font-size:18px;
+	padding:16px 31px;
+	
+	
+}
+.btn:hover {
+	background-color:#edafb8;
+	color: #f9dec9;
+}
+
+header input{
+	background-color:#edafb8;
+	width:inherit;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+label{
+	display:block;
+	font-size: 20px;
+	margin-bottom: 5px;
+	white-space: nowrap;
+
+}
+
+img.center{
+	align-self: middle;
+}
+
+.col1{
+	width:40%;
+	align-items: center;
+	display:flex;
+	flex-direction: column;
+}
+
+.col2{
+	width:60%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	
+}
+
+table{
+	border-collapse: collapse;
+}
+td , th{
+	border: 0;
+}
+
+.boutonrond {
+	width:40px;
+	height:40px;
+	background:#e9afa3;
+	font:bold 13px Arial;
+	border-radius:50%;
+	border:none;
+	color:#000;
+}
+
+.container{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+
+}
+
+/* nouveuax choses d'Axel*/
+
+nav {
+	color: #5900b3;
+	align-items: center;
+	background-color: #edafb8;
+	height: 100%;
+	min-height: 100%;
+}
+div nav a {
+	text-decoration: none;
+	color : #5900b3; /* THIS IS THE COLOR OF THE CHAT/CHIEN/CHEVAL navigation bar*/
+}
+
+div nav a:hover{
+	color : #f9dec9; 
+}
+
+.cadre .Objet select{
+	max-height: 1.5em;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.cadre .Objet select:hover{
+	max-height: 5em;
+}
+header {
+	display:flex;
+	justify-content: center;
+	width: 100%;
+	background-color: #edafb8; 
+}
+
+header li {
+    display:inline-block;
+	padding: 14px 16px;
+}
+
+header li:hover {
+    color: #f9dec9;
+	background-color: #edafb8;
+	border-radius: 5px;
+}
+
+header a { 
+	color: inherit;
+	text-decoration: none;
+}
+div{
+	padding:0px 0px 0px 0px;
+	margin : 0px 0px 0px 0px;
+}
+#OngletCategorie {
+	min-width : 100%;
+	display : flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow-x: scroll ;
+	overflow-y:hidden;
+
+}
+
+.Corps {
+	display : flex;
+	flex-direction: row;
+
+}
+
+.Onglet {
+	display:flex;
+	background-color: #edafb8;
+	padding : 10px 70px;
+	list-style: none;
+	height: 40px;
+	width: auto;
+	max-width: 150px;
+	min-width: 6em;
+	overflow: hidden;
+	border-right : solid white 3px; 
+	flex-wrap: wrap;
+
+}
+
+.Onglet div{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding-left: 0px;
+	margin-top : 40px;
+	margin-left : 0px;
+	margin-right : 0px;
+	overflow: visible;
+}
+
+
+.Objet {
+	background-color: #edafb8;
+	background-size: 100%;
+	padding-top : 0px;
+	padding-bottom: 0px;
+	padding-left : 0px;
+	padding-right : 0px
+	
+}
+
+
+.inscription{
+	display:flex;
+	justify-content: space-around;
+}

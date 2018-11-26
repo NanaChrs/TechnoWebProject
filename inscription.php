@@ -5,16 +5,15 @@
 	
 	<form method="post" >
 
+		<label for="First Name">Prénom:</label></br><input type="text" name="First_Name" id="First_Name" />
 
-		<label for="First Name">First Name:</label></br><input type="text" name="First_Name" id="First_Name" />
+		<label for="Last_Name">Nom:</label></br><input name="Last_Name" type="text" id="Last_Name" /><br />
 
-		<label for="Last_Name">Last Name:</label></br><input name="Last_Name" type="text" id="Last_Name" /><br />
+		<label for="Date_of_Birth">Anniversaire:</label></br><input type="Date" name="Date_of_Birth" id="Date_of_Birth" /></br>
 
-		<label for="Date_of_Birth">Date of Birth:</label></br><input type="Date" name="Date_of_Birth" id="Date_of_Birth" /></br>
+		<label for="Phone">Numbéro de Téléphone:</label></br><input type="txt" name="Phone" id="Phone" /></br>
 
-		<label for="Phone">Phone number:</label></br><input type="txt" name="Phone" id="Phone" /></br>
-
-		<label for="email">Email Address:</label></br><input type="email" name="email" id="email" /></br>
+		<label for="email">Email Adresse:</label></br><input type="email" name="email" id="email" /></br>
 
 		<label for="email_check">Confirmer l'adresse mail:</label></br><input type="email" name="email_check" id="email_check" /></br>
 
