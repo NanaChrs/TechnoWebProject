@@ -3,7 +3,7 @@
 	include("sqlfunctions.php");
 	include("doctype.php");
 	include("header.php");
-	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', 'root');} # remove second root to work on PC
+	try {$bdd = new PDO('mysql:host=localhost;dbname=felindus;charset=utf8', 'root', '');} # remove second root to work on PC
 	    catch (Exception $e){die('Erreur : ' . $e->getMessage());}
 
 
