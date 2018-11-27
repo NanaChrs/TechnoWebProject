@@ -45,7 +45,7 @@
 				$result = $sth->fetchAll();
 				if (empty($result)){
 					$bdd->exec('INSERT INTO clients(Nom, Prenom, Telephone, Mail, Password) VALUES("'.$nom.'", "'.$prenom.'", "'.$phone.'","'.$email.'","'.$pass.'");');
-					echo'compte créé veuillez vous connecter';
+					echo'Compte créé, veuillez vous connecter.';
 
 				}
 				else{

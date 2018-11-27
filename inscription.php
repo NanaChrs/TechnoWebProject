@@ -5,21 +5,21 @@
 	
 	<form method="post" >
 
-		<label for="First Name">Prénom:</label></br><input type="text" name="First_Name" id="First_Name" />
+		<label for="First Name">Prénom:</label><input type="text" name="First_Name" id="First_Name" /></br></br>
 
-		<label for="Last_Name">Nom:</label></br><input name="Last_Name" type="text" id="Last_Name" /><br />
+		<label for="Last_Name">Nom:</label><input name="Last_Name" type="text" id="Last_Name" /></br></br>
 
-		<label for="Date_of_Birth">Anniversaire:</label></br><input type="Date" name="Date_of_Birth" id="Date_of_Birth" /></br>
+		<label for="Date_of_Birth">Anniversaire:</label><input type="Date" name="Date_of_Birth" id="Date_of_Birth" /></br></br>
 
-		<label for="Phone">Numbéro de Téléphone:</label></br><input type="txt" name="Phone" id="Phone" /></br>
+		<label for="Phone">Numbéro de Téléphone:</label><input type="txt" name="Phone" id="Phone" /></br></br>
 
-		<label for="email">Email Adresse:</label></br><input type="email" name="email" id="email" /></br>
+		<label for="email">Email Adresse:</label><input type="email" name="email" id="email" /></br></br>
 
-		<label for="email_check">Confirmer l'adresse mail:</label></br><input type="email" name="email_check" id="email_check" /></br>
+		<label for="email_check">Confirmer l'adresse mail:</label><input type="email" name="email_check" id="email_check" /></br></br>
 
-		<label for="password">Mot de Passe:</label></br><input type="password" name="password" id="password_ins" /></br>
+		<label for="password">Mot de Passe:</label><input type="password" name="password" id="password_ins" /></br></br>
 
-		<label for="password_check">Confirmez le mot de passe:</label></br><input type="password" name="password_check" id="password_check" /></br>
+		<label for="password_check">Confirmez le mot de passe:</label><input type="password" name="password_check" id="password_check" /></br></br>
 		
 		<input name="Inscription" type="submit" value="Inscrivez-vous !" class="btn"/>
 

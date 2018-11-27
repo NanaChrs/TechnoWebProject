@@ -48,7 +48,7 @@
 			<input type="text" maxlength="3" name="code_sécurité" format="NNN" id="code_sécurité" />
 			</br></br>
 
-			<label for="choix2">J'accepte la conservation sécuriséede mes données bancaires</br>pour mes prochaines commandes :</label>
+			<label for="choix2">J'accepte la conservation sécurisée de mes données bancaires</br>pour mes prochaines commandes :</label>
 			<INPUT type="radio" name="choix2" value="5"> Oui
 			<INPUT type="radio" name="choix2" value="6"> Non
 			</br></br>

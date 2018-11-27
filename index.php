@@ -36,7 +36,7 @@ else{
 	echo "<html><head>";// </head><body>";
 	echo("<center><h1> Bienvenue à Félindus ! </h1></center>");
 	echo("<center><img src='Images/pup1.jpg' class='center' height=50% width=50%></center>");
-	echo("<h2> Si vous cherechez votre nouveu meilleur ami (qui est un animal), vouz êtes à la parfait e-magasin !");
+	echo("<h2><center> Si vous cherchez votre nouveau meilleur ami (qui est un animal), vous êtes au parfait e-magasin !</center>");
 
 }
 // TODO using $page decide to include header.php

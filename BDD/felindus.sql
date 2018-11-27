@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 23 nov. 2018 à 16:19
+-- Généré le :  mar. 27 nov. 2018 à 21:34
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -39,18 +39,17 @@ CREATE TABLE IF NOT EXISTS `clients` (
   `Adresse` text,
   `Admin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `clients`
 --
 
 INSERT INTO `clients` (`Id`, `Nom`, `Prenom`, `Telephone`, `Mail`, `Password`, `Adresse`, `Admin`) VALUES
-(1, 'JAROSSET', 'Corentin', '0606060606', 'corentinjarosset@nulos.fr', '041097', '69 rue des nulos\r\n59000 Lille\r\n(Avec Antoine)', NULL),
-(2, 'FLEURY', 'Antoine', '0602010230', 'antoinefleury@nulos.fr', '180997', 'Avec Corentin', NULL),
-(18, 'tr', 'tr', '01215487', 'tr@tr.fr', 'tr', NULL, NULL),
-(17, 'Malbranque', 'Louis', '614014164', 'loui@truc.fr', 'tr', NULL, NULL),
-(15, 'truc', 'truc', '0512458457', 'truc@truc.fr', 'truc', NULL, NULL),
+(1, 'JAROSSET', 'Corentin', '0606060606', 'corentinjarosset@hotmail.fr', '041097', '6 rue des pommes\r\n59000 Lille\r\nFrance', NULL),
+(2, 'FLEURY', 'Antoine', '0602010230', 'antoinefleury@gmail.fr', '180997', 'ISEN', NULL),
+(20, 'Zerbin', 'Axel', '0987456532', 'axelzerbin@gmail.com', 'viveleweb', NULL, NULL),
+(19, 'Deweese', 'Story', '0624561324', 'storydeweese@gmail.com', 'hey', NULL, NULL),
 (16, 'Christiaens', 'Mathilde', '750889070', 'mathildechristiaens@hotmail.fr', 'tr', NULL, 1);
 
 -- --------------------------------------------------------
@@ -67,18 +66,16 @@ CREATE TABLE IF NOT EXISTS `commande` (
   `Qte` int(11) NOT NULL,
   `IdClient` int(11) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `commande`
 --
 
 INSERT INTO `commande` (`Id`, `IdProduit`, `Nom`, `Qte`, `IdClient`) VALUES
-(32, 4, 'chien', 2, 1),
-(33, 2, 'Chaton mignon', 1, 1),
-(34, 2, 'Chaton mignon', 5, 1),
 (35, 4, 'chien', 3, 1),
-(36, 6, 'Cheval sans patte', 1, 1);
+(36, 6, 'Cheval sans patte', 1, 1),
+(37, 4, 'chien', 3, 16);
 
 -- --------------------------------------------------------
 
@@ -103,12 +100,12 @@ CREATE TABLE IF NOT EXISTS `produit` (
 --
 
 INSERT INTO `produit` (`IdProduit`, `Nom`, `Prix`, `QteStock`, `Photo`, `Description`, `IdType`) VALUES
-(1, 'Chaton', 100, -2, 'chatonmignon.jpg', 'Chaton tout doux qui aime les câlins', 1),
-(2, 'Chaton mignon', 2000, 5, 'kitten2.jpg', 'Un chaton mignon cher', 1),
-(3, 'Chaton moins mignon', 1, 45632, 'chatonmoche.jpg', 'des trucs', 1),
-(4, 'chien', 500, 92, 'chien.jpg', 'chien', 2),
-(5, 'Chien blanc crême brûler', 100000, 0, 'chienlanccrème.jpg', 'un chien creme bruelr qui  le meme gouts', 2),
-(6, 'Cheval sans patte', 1, 113, 'chevalsanspatte.jpg', '', 3);
+(1, 'Chaton', 100, 10, 'chatonmignon.jpg', 'Chaton tout doux qui aime les câlins', 1),
+(2, 'Chaton mignon', 2000, 5, 'kitten2.jpg', 'Chaton mignon cher', 1),
+(3, 'Chaton moins mignon', 50, 456, 'chatonmoche.jpg', 'Chaton moche', 1),
+(4, 'Chien', 500, 89, 'chien.jpg', 'Chien poilu', 2),
+(5, 'Chien blanc crème brûler', 100000, 10, 'chienlanccrème.jpg', 'Un chien couleur crème brûlée', 2),
+(6, 'Cheval sans patte', 99, 120, 'chevalsanspatte.jpg', 'Cheval handicapé', 3);
 
 -- --------------------------------------------------------
 

@@ -70,7 +70,7 @@
                     echo('<input name="Prix" value="'. $objet['Prix'] .'"hidden>');
                     //echo('<select multiple name="Quantite">');
 
-                        echo('<input type="number" min ="0" name="Qte" id="Qte" placeholder="Quantité, Ex : 3">');
+                        echo('<input type="number" min ="0" name="Qte" id="Qte" placeholder="Changer la quantité">');
                         //echo('<input type="submit" name="page" value="ajouter">');
                         //echo('<input type="submit" name="page" value="admin">');
                         echo('<input type="submit" name="page" value="admin" hidden>');
