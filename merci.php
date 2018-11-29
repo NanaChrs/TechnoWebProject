@@ -11,13 +11,17 @@
     
 </head>
 <body>
+<?php
+	if (!empty($_SESSION["cLient"])){
+		if (!empty($_SESSION["client"]["Panier"])){
+	echo "
 	<center>
 		<h1>Nous vous remercions pour votre achat !</h1>
 		<!-- Bouton pour revenir à la page Catégorie-->														
-		<a href="index.php?page=categorie"><input type="submit" name="shopping" class="btn" value="Continuer sur le site"></a>		
-	</center>
+		<a href='index.php?page=categorie'><input type='submit' name='shopping' class='btn' value='Continuer sur le site'></a>		
+	</center>";
 	
-<?php
+
 		
 
 		//$tableau = array(array(1,"chaton",100,1),array(2,"chien",50,1)); //test sans le $_SESSION
@@ -38,6 +42,15 @@
 		}
 
 		unset($_SESSION['panier']); //supprime le panier une fois qu'il a été ajouté dans la bdd commande
+	}
+	else{
+		echo'Votre panier est vide';
+	}
+	}
+	else{
+		echo"Pour accéder à cette page veuillez vous connecter.";
+		include("traitement_co.php");
+	}
 	?>
 
 

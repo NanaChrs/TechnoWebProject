@@ -12,6 +12,7 @@
 //TODO get page parameter ($_GET['page'] or $_POST['page']) and assign it into $page variable
 $page=getParam("page");
 //echo ''.$page .'.php';
+var_dump($_SESSION['client']);
 if(file_exists(''.$page .'.php') && $page!="index"){
 	include(''.$page .'.php');
 }

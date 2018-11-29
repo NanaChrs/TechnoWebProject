@@ -3,18 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Page Admin</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="wegotstyle(Axel).css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="story.css"/>
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <link rel="shortcut icon" href="panierIcon.png"/>
 	<meta charset="utf-8" />
     
 </head>
 <body>
-<div class="Corps">
 
-    <nav>
-        <div>
-            <?php 
+
+
+<?php 
+if (!empty($_SESSION['client'])){
+
+    if ($_SESSION['client']['Admin']==1){
+        echo '<div class="Corps">';
+            echo' <nav>';
+            echo'     <div>';
                     
                 
                 $categories = $bdd->query("select * from Type");
@@ -29,17 +34,13 @@
                     $objets -> execute(array($categorie['IdType']));
                     echo('</div>');
                 }
-            
-            ?>
 
 
 
 
-        </div>
+    echo'    </div>
     </nav>
-
-    <div class = "cadre">
-        <?php
+    <div class = "cadre">';
             if(isset($_SESSION['Panier']) and !empty($_SESSION['Panier'])){
                 foreach ($_SESSION['panier'] as $ligne ) {
                     $panier[$ligne[1]] = $ligne;
@@ -85,6 +86,17 @@
                 if ($qte!=""){
                     $bdd->exec('UPDATE produit SET QteStock = '.getParam("Qte").' WHERE IdProduit = '.getParam("Id").'');
                 } 
+            }
+            else{
+                echo "Vous n'êtes pas connecté ou n'êtes pas un administrateur : cette page n'est pas accessible pour vous."; 
+                include ('traitement_co.php');
+            }
+        }
+        
+else{
+    echo "Vous n'êtes pas connecté ou n'êtes pas un administrateur : cette page n'est pas accessible pour vous."; 
+    include ('traitement_co.php');
+}
             //var_dump($_SESSION);
         ?>
 
