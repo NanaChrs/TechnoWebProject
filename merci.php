@@ -12,8 +12,9 @@
 </head>
 <body>
 <?php
-	if (!empty($_SESSION["cLient"])){
-		if (!empty($_SESSION["client"]["Panier"])){
+	//var_dump($_SESSION['client']["pnier"]);
+	if (!empty($_SESSION["client"])){
+		if (!empty($_SESSION["panier"])){
 	echo "
 	<center>
 		<h1>Nous vous remercions pour votre achat !</h1>
@@ -42,10 +43,10 @@
 		}
 
 		unset($_SESSION['panier']); //supprime le panier une fois qu'il a été ajouté dans la bdd commande
-	}
-	else{
-		echo'Votre panier est vide';
-	}
+		}
+		else{
+			echo'Votre panier est vide';
+		}
 	}
 	else{
 		echo"Pour accéder à cette page veuillez vous connecter.";

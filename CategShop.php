@@ -56,6 +56,7 @@
                 while($objet = $objets -> fetch()){
 
                     echo('<div class = "Objet">');
+                    echo('<img src="Images/'.$objet['Photo'].'"height=30% width=30%/>');
                     if (isset($panier[$objet['Nom']][3])) { //degage les erreuers, meme si elle ne font rien de mal
                         echo($objet['QteStock'] - $panier[$objet['Nom']][3]);
                     }
@@ -67,10 +68,10 @@
                     
                     echo('      ');
                     //echo '<img src="Images/"'.$objet['Photo'].'>';
-                    echo('<img src="Images/'.$objet['Photo'].'"height=30% width=30%/>');
+                    
                     echo($objet['Nom']);
                     echo('  ');echo($objet['Prix']);echo('€');
-                    echo('<form form="post">');
+                    echo('<form form="post" style:"vertical-align:middle;>');
                     echo('<input name="Id" value="'. $objet['IdProduit'] .'"hidden>');
                     echo('<input name="Nom" value="'. $objet['Nom'] .'"hidden>');
                     echo('<input name="Prix" value="'. $objet['Prix'] .'"hidden>');
