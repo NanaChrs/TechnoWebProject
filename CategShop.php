@@ -71,7 +71,7 @@
                     
                     echo($objet['Nom']);
                     echo('  ');echo($objet['Prix']);echo('€');
-                    echo('<form form="post" style:"vertical-align:middle;>');
+                    echo('<form form="post">');
                     echo('<input name="Id" value="'. $objet['IdProduit'] .'"hidden>');
                     echo('<input name="Nom" value="'. $objet['Nom'] .'"hidden>');
                     echo('<input name="Prix" value="'. $objet['Prix'] .'"hidden>');
